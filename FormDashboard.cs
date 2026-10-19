@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace projek_mie
 {
-    public partial class Form2 : Form
+    public partial class FormDashboard : Form
     {
-        public Form2()
+        public FormDashboard()
         {
             InitializeComponent();
         }
