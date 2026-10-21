@@ -63,6 +63,12 @@
     <Compile Include="FormDashboard.Designer.cs">
       <DependentUpon>FormDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKategori.Designer.cs">
+      <DependentUpon>FormKategori.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formlogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,11 +87,23 @@
     <Compile Include="FormPesan.Designer.cs">
       <DependentUpon>FormPesan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProduk.Designer.cs">
+      <DependentUpon>FormProduk.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRiwayat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRiwayat.Designer.cs">
       <DependentUpon>FormRiwayat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTopings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTopings.Designer.cs">
+      <DependentUpon>FormTopings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKategori.resx">
+      <DependentUpon>FormKategori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlogin.resx">
       <DependentUpon>Formlogin.cs</DependentUpon>
@@ -105,8 +126,14 @@
     <EmbeddedResource Include="FormPesan.resx">
       <DependentUpon>FormPesan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormProduk.resx">
+      <DependentUpon>FormProduk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRiwayat.resx">
       <DependentUpon>FormRiwayat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTopings.resx">
+      <DependentUpon>FormTopings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
