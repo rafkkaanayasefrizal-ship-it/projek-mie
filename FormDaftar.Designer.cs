@@ -1,4 +1,4 @@
-﻿namespace projek_mie
+namespace projek_mie
 {
     partial class FormDaftar
     {
@@ -35,13 +35,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDaftar = new System.Windows.Forms.Button();
+            this.btnBatal = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textNama = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
+            this.textPassword = new System.Windows.Forms.TextBox();
+            this.textKonfirmasiPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,27 +110,27 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Konfirmasi Password";
             // 
-            // button1
+            // btnDaftar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(121, 381);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 37);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Daftar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDaftar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDaftar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDaftar.Location = new System.Drawing.Point(121, 381);
+            this.btnDaftar.Name = "btnDaftar";
+            this.btnDaftar.Size = new System.Drawing.Size(178, 37);
+            this.btnDaftar.TabIndex = 6;
+            this.btnDaftar.Text = "Daftar";
+            this.btnDaftar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnBatal
             // 
-            this.button2.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(406, 381);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 37);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Batal";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBatal.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btnBatal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Location = new System.Drawing.Point(406, 381);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(185, 37);
+            this.btnBatal.TabIndex = 7;
+            this.btnBatal.Text = "Batal";
+            this.btnBatal.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -142,63 +142,63 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // textNama
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(70, 157);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(636, 31);
-            this.textBox1.TabIndex = 9;
+            this.textNama.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textNama.Location = new System.Drawing.Point(70, 157);
+            this.textNama.Multiline = true;
+            this.textNama.Name = "textNama";
+            this.textNama.Size = new System.Drawing.Size(636, 31);
+            this.textNama.TabIndex = 9;
             // 
-            // textBox2
+            // textEmail
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.Location = new System.Drawing.Point(68, 214);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(636, 31);
-            this.textBox2.TabIndex = 10;
+            this.textEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textEmail.Location = new System.Drawing.Point(68, 214);
+            this.textEmail.Multiline = true;
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(636, 31);
+            this.textEmail.TabIndex = 10;
             // 
-            // textBox3
+            // textPassword
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.Location = new System.Drawing.Point(68, 271);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(636, 31);
-            this.textBox3.TabIndex = 11;
+            this.textPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textPassword.Location = new System.Drawing.Point(68, 271);
+            this.textPassword.Multiline = true;
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(636, 31);
+            this.textPassword.TabIndex = 11;
             // 
-            // textBox4
+            // textKonfirmasiPassword
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox4.Location = new System.Drawing.Point(68, 328);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(636, 31);
-            this.textBox4.TabIndex = 12;
+            this.textKonfirmasiPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textKonfirmasiPassword.Location = new System.Drawing.Point(68, 328);
+            this.textKonfirmasiPassword.Multiline = true;
+            this.textKonfirmasiPassword.Name = "textKonfirmasiPassword";
+            this.textKonfirmasiPassword.Size = new System.Drawing.Size(636, 31);
+            this.textKonfirmasiPassword.TabIndex = 12;
             // 
-            // Form2
+            // FormDaftar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(772, 450);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textKonfirmasiPassword);
+            this.Controls.Add(this.textPassword);
+            this.Controls.Add(this.textEmail);
+            this.Controls.Add(this.textNama);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBatal);
+            this.Controls.Add(this.btnDaftar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "Form3";
+            this.Name = "FormDaftar";
+            this.Text = "FormDaftar";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,12 +213,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDaftar;
+        private System.Windows.Forms.Button btnBatal;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textNama;
+        private System.Windows.Forms.TextBox textEmail;
+        private System.Windows.Forms.TextBox textPassword;
+        private System.Windows.Forms.TextBox textKonfirmasiPassword;
     }
 }
