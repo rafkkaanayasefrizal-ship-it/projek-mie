@@ -1,4 +1,4 @@
-﻿namespace projek_mie
+namespace projek_mie
 {
     partial class FormRiwayat
     {
@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRiwayat));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKeluar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,28 +39,28 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpTanggal = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbFilterStatus = new System.Windows.Forms.ComboBox();
+            this.btnCari = new System.Windows.Forms.Button();
+            this.dgvRiwayat = new System.Windows.Forms.DataGridView();
             this.antrian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menu3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblTotalBelanja = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayat)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnKeluar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -72,17 +72,17 @@
             this.panel1.Size = new System.Drawing.Size(748, 40);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // btnKeluar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(657, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Keluar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnKeluar.BackColor = System.Drawing.Color.White;
+            this.btnKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKeluar.Location = new System.Drawing.Point(657, 9);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
+            this.btnKeluar.TabIndex = 7;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -167,12 +167,12 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Semua pesanan yang pernah kamu buat";
             // 
-            // dateTimePicker1
+            // dtpTanggal
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(74, 126);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(135, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.dtpTanggal.Location = new System.Drawing.Point(74, 126);
+            this.dtpTanggal.Name = "dtpTanggal";
+            this.dtpTanggal.Size = new System.Drawing.Size(135, 20);
+            this.dtpTanggal.TabIndex = 11;
             // 
             // label8
             // 
@@ -194,45 +194,45 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Status";
             // 
-            // comboBox1
+            // cmbFilterStatus
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbFilterStatus.FormattingEnabled = true;
+            this.cmbFilterStatus.Items.AddRange(new object[] {
             "Berhasil",
             "Gagal",
             "Proses"});
-            this.comboBox1.Location = new System.Drawing.Point(293, 126);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cmbFilterStatus.Location = new System.Drawing.Point(293, 126);
+            this.cmbFilterStatus.Name = "cmbFilterStatus";
+            this.cmbFilterStatus.Size = new System.Drawing.Size(121, 21);
+            this.cmbFilterStatus.TabIndex = 14;
             // 
-            // button2
+            // btnCari
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(447, 126);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 21);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "cari";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCari.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCari.Location = new System.Drawing.Point(447, 126);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(75, 21);
+            this.btnCari.TabIndex = 15;
+            this.btnCari.Text = "cari";
+            this.btnCari.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvRiwayat
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRiwayat.AllowUserToAddRows = false;
+            this.dgvRiwayat.AllowUserToDeleteRows = false;
+            this.dgvRiwayat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRiwayat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRiwayat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.antrian,
             this.tanggal,
             this.menu3,
             this.total,
             this.status});
-            this.dataGridView1.Location = new System.Drawing.Point(25, 165);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 80);
-            this.dataGridView1.TabIndex = 16;
+            this.dgvRiwayat.Location = new System.Drawing.Point(25, 165);
+            this.dgvRiwayat.Name = "dgvRiwayat";
+            this.dgvRiwayat.ReadOnly = true;
+            this.dgvRiwayat.Size = new System.Drawing.Size(748, 80);
+            this.dgvRiwayat.TabIndex = 16;
             // 
             // antrian
             // 
@@ -264,16 +264,16 @@
             this.status.Name = "status";
             this.status.ReadOnly = true;
             // 
-            // label13
+            // lblTotalBelanja
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(676, 276);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 24);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Rp32.000";
+            this.lblTotalBelanja.AutoSize = true;
+            this.lblTotalBelanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBelanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblTotalBelanja.Location = new System.Drawing.Point(676, 276);
+            this.lblTotalBelanja.Name = "lblTotalBelanja";
+            this.lblTotalBelanja.Size = new System.Drawing.Size(97, 24);
+            this.lblTotalBelanja.TabIndex = 19;
+            this.lblTotalBelanja.Text = "Rp32.000";
             // 
             // label12
             // 
@@ -293,13 +293,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblTotalBelanja);
+            this.Controls.Add(this.dgvRiwayat);
+            this.Controls.Add(this.btnCari);
+            this.Controls.Add(this.cmbFilterStatus);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpTanggal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
@@ -308,7 +308,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,7 +317,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKeluar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -326,18 +326,18 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpTanggal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbFilterStatus;
+        private System.Windows.Forms.Button btnCari;
+        private System.Windows.Forms.DataGridView dgvRiwayat;
         private System.Windows.Forms.DataGridViewTextBoxColumn antrian;
         private System.Windows.Forms.DataGridViewTextBoxColumn tanggal;
         private System.Windows.Forms.DataGridViewTextBoxColumn menu3;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTotalBelanja;
         private System.Windows.Forms.Label label12;
     }
 }
