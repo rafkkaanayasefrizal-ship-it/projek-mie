@@ -118,6 +118,7 @@ namespace projek_mie
             this.lblNavRiwayat.Size = new System.Drawing.Size(45, 13);
             this.lblNavRiwayat.TabIndex = 4;
             this.lblNavRiwayat.Text = "Riwayat";
+            this.lblNavRiwayat.Click += new System.EventHandler(this.lblNavRiwayat_Click);
             // 
             // lblNavPesan
             // 
@@ -138,6 +139,7 @@ namespace projek_mie
             this.lblNavDashboard.Size = new System.Drawing.Size(59, 13);
             this.lblNavDashboard.TabIndex = 2;
             this.lblNavDashboard.Text = "Dashboard";
+            this.lblNavDashboard.Click += new System.EventHandler(this.lblNavDashboard_Click);
             // 
             // lblBrand
             // 
@@ -448,6 +450,7 @@ namespace projek_mie
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
             this.Controls.Add(this.panelNavbar);
+            this.MaximizeBox = false;
             this.Name = "FormPesan";
             this.Text = "FormPesan";
             this.panelNavbar.ResumeLayout(false);

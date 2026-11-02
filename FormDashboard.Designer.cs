@@ -30,24 +30,24 @@ namespace projek_mie
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboard));
             this.panelNavbar = new System.Windows.Forms.Panel();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.lblBrand = new System.Windows.Forms.Label();
-            this.lblNavDashboard = new System.Windows.Forms.Label();
-            this.lblNavPesan = new System.Windows.Forms.Label();
-            this.lblNavRiwayat = new System.Windows.Forms.Label();
-            this.lblUserGreeting = new System.Windows.Forms.Label();
             this.btnKeluar = new System.Windows.Forms.Button();
+            this.lblUserGreeting = new System.Windows.Forms.Label();
+            this.lblNavRiwayat = new System.Windows.Forms.Label();
+            this.lblNavPesan = new System.Windows.Forms.Label();
+            this.lblNavDashboard = new System.Windows.Forms.Label();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblJudulPage = new System.Windows.Forms.Label();
             this.lblSubJudulPage = new System.Windows.Forms.Label();
             this.panelCardPesananAktif = new System.Windows.Forms.Panel();
-            this.panelCardTotalPesanan = new System.Windows.Forms.Panel();
-            this.panelCardTotalBelanja = new System.Windows.Forms.Panel();
-            this.lblCardTitlePesananAktif = new System.Windows.Forms.Label();
             this.lblPesananAktif = new System.Windows.Forms.Label();
-            this.lblCardTitleTotalPesanan = new System.Windows.Forms.Label();
+            this.lblCardTitlePesananAktif = new System.Windows.Forms.Label();
+            this.panelCardTotalPesanan = new System.Windows.Forms.Panel();
             this.lblTotalPesanan = new System.Windows.Forms.Label();
-            this.lblCardTitleTotalBelanja = new System.Windows.Forms.Label();
+            this.lblCardTitleTotalPesanan = new System.Windows.Forms.Label();
+            this.panelCardTotalBelanja = new System.Windows.Forms.Panel();
             this.lblTotalBelanja = new System.Windows.Forms.Label();
+            this.lblCardTitleTotalBelanja = new System.Windows.Forms.Label();
             this.lblJudulTabel = new System.Windows.Forms.Label();
             this.dgvPesananKamu = new System.Windows.Forms.DataGridView();
             this.menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,15 +79,59 @@ namespace projek_mie
             this.panelNavbar.Size = new System.Drawing.Size(748, 40);
             this.panelNavbar.TabIndex = 0;
             // 
-            // picLogo
+            // btnKeluar
             // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(12, 0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(52, 41);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 1;
-            this.picLogo.TabStop = false;
+            this.btnKeluar.BackColor = System.Drawing.Color.White;
+            this.btnKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKeluar.Location = new System.Drawing.Point(657, 9);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
+            this.btnKeluar.TabIndex = 7;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = false;
+            // 
+            // lblUserGreeting
+            // 
+            this.lblUserGreeting.AutoSize = true;
+            this.lblUserGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblUserGreeting.Location = new System.Drawing.Point(557, 15);
+            this.lblUserGreeting.Name = "lblUserGreeting";
+            this.lblUserGreeting.Size = new System.Drawing.Size(69, 13);
+            this.lblUserGreeting.TabIndex = 6;
+            this.lblUserGreeting.Text = "Halo,Pembeli";
+            // 
+            // lblNavRiwayat
+            // 
+            this.lblNavRiwayat.AutoSize = true;
+            this.lblNavRiwayat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNavRiwayat.Location = new System.Drawing.Point(344, 15);
+            this.lblNavRiwayat.Name = "lblNavRiwayat";
+            this.lblNavRiwayat.Size = new System.Drawing.Size(45, 13);
+            this.lblNavRiwayat.TabIndex = 5;
+            this.lblNavRiwayat.Text = "Riwayat";
+            this.lblNavRiwayat.Click += new System.EventHandler(this.lblNavRiwayat_Click);
+            // 
+            // lblNavPesan
+            // 
+            this.lblNavPesan.AutoSize = true;
+            this.lblNavPesan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNavPesan.Location = new System.Drawing.Point(283, 15);
+            this.lblNavPesan.Name = "lblNavPesan";
+            this.lblNavPesan.Size = new System.Drawing.Size(37, 13);
+            this.lblNavPesan.TabIndex = 4;
+            this.lblNavPesan.Text = "Pesan";
+            this.lblNavPesan.Click += new System.EventHandler(this.lblNavPesan_Click);
+            // 
+            // lblNavDashboard
+            // 
+            this.lblNavDashboard.AutoSize = true;
+            this.lblNavDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNavDashboard.Location = new System.Drawing.Point(199, 15);
+            this.lblNavDashboard.Name = "lblNavDashboard";
+            this.lblNavDashboard.Size = new System.Drawing.Size(59, 13);
+            this.lblNavDashboard.TabIndex = 3;
+            this.lblNavDashboard.Text = "Dashboard";
             // 
             // lblBrand
             // 
@@ -100,57 +144,15 @@ namespace projek_mie
             this.lblBrand.TabIndex = 2;
             this.lblBrand.Text = "NieNoodle";
             // 
-            // lblNavDashboard
+            // picLogo
             // 
-            this.lblNavDashboard.AutoSize = true;
-            this.lblNavDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblNavDashboard.Location = new System.Drawing.Point(199, 15);
-            this.lblNavDashboard.Name = "lblNavDashboard";
-            this.lblNavDashboard.Size = new System.Drawing.Size(59, 13);
-            this.lblNavDashboard.TabIndex = 3;
-            this.lblNavDashboard.Text = "Dashboard";
-            // 
-            // lblNavPesan
-            // 
-            this.lblNavPesan.AutoSize = true;
-            this.lblNavPesan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblNavPesan.Location = new System.Drawing.Point(283, 15);
-            this.lblNavPesan.Name = "lblNavPesan";
-            this.lblNavPesan.Size = new System.Drawing.Size(37, 13);
-            this.lblNavPesan.TabIndex = 4;
-            this.lblNavPesan.Text = "Pesan";
-            // 
-            // lblNavRiwayat
-            // 
-            this.lblNavRiwayat.AutoSize = true;
-            this.lblNavRiwayat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblNavRiwayat.Location = new System.Drawing.Point(344, 15);
-            this.lblNavRiwayat.Name = "lblNavRiwayat";
-            this.lblNavRiwayat.Size = new System.Drawing.Size(45, 13);
-            this.lblNavRiwayat.TabIndex = 5;
-            this.lblNavRiwayat.Text = "Riwayat";
-            // 
-            // lblUserGreeting
-            // 
-            this.lblUserGreeting.AutoSize = true;
-            this.lblUserGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblUserGreeting.Location = new System.Drawing.Point(557, 15);
-            this.lblUserGreeting.Name = "lblUserGreeting";
-            this.lblUserGreeting.Size = new System.Drawing.Size(69, 13);
-            this.lblUserGreeting.TabIndex = 6;
-            this.lblUserGreeting.Text = "Halo,Pembeli";
-            // 
-            // btnKeluar
-            // 
-            this.btnKeluar.BackColor = System.Drawing.Color.White;
-            this.btnKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnKeluar.Location = new System.Drawing.Point(657, 9);
-            this.btnKeluar.Name = "btnKeluar";
-            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
-            this.btnKeluar.TabIndex = 7;
-            this.btnKeluar.Text = "Keluar";
-            this.btnKeluar.UseVisualStyleBackColor = false;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(12, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(52, 41);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 1;
+            this.picLogo.TabStop = false;
             // 
             // lblJudulPage
             // 
@@ -184,25 +186,16 @@ namespace projek_mie
             this.panelCardPesananAktif.Size = new System.Drawing.Size(220, 100);
             this.panelCardPesananAktif.TabIndex = 10;
             // 
-            // panelCardTotalPesanan
+            // lblPesananAktif
             // 
-            this.panelCardTotalPesanan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelCardTotalPesanan.Controls.Add(this.lblTotalPesanan);
-            this.panelCardTotalPesanan.Controls.Add(this.lblCardTitleTotalPesanan);
-            this.panelCardTotalPesanan.Location = new System.Drawing.Point(277, 135);
-            this.panelCardTotalPesanan.Name = "panelCardTotalPesanan";
-            this.panelCardTotalPesanan.Size = new System.Drawing.Size(225, 100);
-            this.panelCardTotalPesanan.TabIndex = 11;
-            // 
-            // panelCardTotalBelanja
-            // 
-            this.panelCardTotalBelanja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelCardTotalBelanja.Controls.Add(this.lblTotalBelanja);
-            this.panelCardTotalBelanja.Controls.Add(this.lblCardTitleTotalBelanja);
-            this.panelCardTotalBelanja.Location = new System.Drawing.Point(532, 135);
-            this.panelCardTotalBelanja.Name = "panelCardTotalBelanja";
-            this.panelCardTotalBelanja.Size = new System.Drawing.Size(229, 100);
-            this.panelCardTotalBelanja.TabIndex = 12;
+            this.lblPesananAktif.AutoSize = true;
+            this.lblPesananAktif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesananAktif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblPesananAktif.Location = new System.Drawing.Point(19, 57);
+            this.lblPesananAktif.Name = "lblPesananAktif";
+            this.lblPesananAktif.Size = new System.Drawing.Size(20, 24);
+            this.lblPesananAktif.TabIndex = 14;
+            this.lblPesananAktif.Text = "1";
             // 
             // lblCardTitlePesananAktif
             // 
@@ -215,27 +208,15 @@ namespace projek_mie
             this.lblCardTitlePesananAktif.TabIndex = 13;
             this.lblCardTitlePesananAktif.Text = "Pesanan Aktif";
             // 
-            // lblPesananAktif
+            // panelCardTotalPesanan
             // 
-            this.lblPesananAktif.AutoSize = true;
-            this.lblPesananAktif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPesananAktif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblPesananAktif.Location = new System.Drawing.Point(19, 57);
-            this.lblPesananAktif.Name = "lblPesananAktif";
-            this.lblPesananAktif.Size = new System.Drawing.Size(20, 24);
-            this.lblPesananAktif.TabIndex = 14;
-            this.lblPesananAktif.Text = "1";
-            // 
-            // lblCardTitleTotalPesanan
-            // 
-            this.lblCardTitleTotalPesanan.AutoSize = true;
-            this.lblCardTitleTotalPesanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCardTitleTotalPesanan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblCardTitleTotalPesanan.Location = new System.Drawing.Point(19, 14);
-            this.lblCardTitleTotalPesanan.Name = "lblCardTitleTotalPesanan";
-            this.lblCardTitleTotalPesanan.Size = new System.Drawing.Size(86, 15);
-            this.lblCardTitleTotalPesanan.TabIndex = 15;
-            this.lblCardTitleTotalPesanan.Text = "Total Pesanan";
+            this.panelCardTotalPesanan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelCardTotalPesanan.Controls.Add(this.lblTotalPesanan);
+            this.panelCardTotalPesanan.Controls.Add(this.lblCardTitleTotalPesanan);
+            this.panelCardTotalPesanan.Location = new System.Drawing.Point(277, 135);
+            this.panelCardTotalPesanan.Name = "panelCardTotalPesanan";
+            this.panelCardTotalPesanan.Size = new System.Drawing.Size(225, 100);
+            this.panelCardTotalPesanan.TabIndex = 11;
             // 
             // lblTotalPesanan
             // 
@@ -248,16 +229,26 @@ namespace projek_mie
             this.lblTotalPesanan.TabIndex = 16;
             this.lblTotalPesanan.Text = "2";
             // 
-            // lblCardTitleTotalBelanja
+            // lblCardTitleTotalPesanan
             // 
-            this.lblCardTitleTotalBelanja.AutoSize = true;
-            this.lblCardTitleTotalBelanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCardTitleTotalBelanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblCardTitleTotalBelanja.Location = new System.Drawing.Point(17, 14);
-            this.lblCardTitleTotalBelanja.Name = "lblCardTitleTotalBelanja";
-            this.lblCardTitleTotalBelanja.Size = new System.Drawing.Size(79, 15);
-            this.lblCardTitleTotalBelanja.TabIndex = 17;
-            this.lblCardTitleTotalBelanja.Text = "Total Belanja";
+            this.lblCardTitleTotalPesanan.AutoSize = true;
+            this.lblCardTitleTotalPesanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCardTitleTotalPesanan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblCardTitleTotalPesanan.Location = new System.Drawing.Point(19, 14);
+            this.lblCardTitleTotalPesanan.Name = "lblCardTitleTotalPesanan";
+            this.lblCardTitleTotalPesanan.Size = new System.Drawing.Size(86, 15);
+            this.lblCardTitleTotalPesanan.TabIndex = 15;
+            this.lblCardTitleTotalPesanan.Text = "Total Pesanan";
+            // 
+            // panelCardTotalBelanja
+            // 
+            this.panelCardTotalBelanja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelCardTotalBelanja.Controls.Add(this.lblTotalBelanja);
+            this.panelCardTotalBelanja.Controls.Add(this.lblCardTitleTotalBelanja);
+            this.panelCardTotalBelanja.Location = new System.Drawing.Point(532, 135);
+            this.panelCardTotalBelanja.Name = "panelCardTotalBelanja";
+            this.panelCardTotalBelanja.Size = new System.Drawing.Size(229, 100);
+            this.panelCardTotalBelanja.TabIndex = 12;
             // 
             // lblTotalBelanja
             // 
@@ -269,6 +260,17 @@ namespace projek_mie
             this.lblTotalBelanja.Size = new System.Drawing.Size(97, 24);
             this.lblTotalBelanja.TabIndex = 18;
             this.lblTotalBelanja.Text = "Rp32.000";
+            // 
+            // lblCardTitleTotalBelanja
+            // 
+            this.lblCardTitleTotalBelanja.AutoSize = true;
+            this.lblCardTitleTotalBelanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCardTitleTotalBelanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblCardTitleTotalBelanja.Location = new System.Drawing.Point(17, 14);
+            this.lblCardTitleTotalBelanja.Name = "lblCardTitleTotalBelanja";
+            this.lblCardTitleTotalBelanja.Size = new System.Drawing.Size(79, 15);
+            this.lblCardTitleTotalBelanja.TabIndex = 17;
+            this.lblCardTitleTotalBelanja.Text = "Total Belanja";
             // 
             // lblJudulTabel
             // 

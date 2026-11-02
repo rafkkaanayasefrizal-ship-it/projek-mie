@@ -32,7 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +51,12 @@
     </Compile>
     <Compile Include="dashboardPenjual.Designer.cs">
       <DependentUpon>dashboardPenjual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formNav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNav.Designer.cs">
+      <DependentUpon>formNav.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
@@ -118,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDaftar.resx">
       <DependentUpon>FormDaftar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNav.resx">
+      <DependentUpon>formNav.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesan.resx">
       <DependentUpon>FormPesan.cs</DependentUpon>

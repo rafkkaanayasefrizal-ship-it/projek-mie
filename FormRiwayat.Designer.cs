@@ -113,6 +113,7 @@ namespace projek_mie
             this.lblNavPesan.Size = new System.Drawing.Size(37, 13);
             this.lblNavPesan.TabIndex = 4;
             this.lblNavPesan.Text = "Pesan";
+            this.lblNavPesan.Click += new System.EventHandler(this.lblNavPesan_Click);
             // 
             // lblNavDashboard
             // 
@@ -123,6 +124,7 @@ namespace projek_mie
             this.lblNavDashboard.Size = new System.Drawing.Size(59, 13);
             this.lblNavDashboard.TabIndex = 3;
             this.lblNavDashboard.Text = "Dashboard";
+            this.lblNavDashboard.Click += new System.EventHandler(this.lblNavDashboard_Click);
             // 
             // lblBrand
             // 
