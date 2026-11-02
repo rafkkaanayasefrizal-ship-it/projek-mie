@@ -1,4 +1,4 @@
-﻿namespace projek_mie
+namespace projek_mie
 {
     partial class Formlogin
     {
@@ -33,13 +33,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
+            this.btnMasuk = new System.Windows.Forms.Button();
+            this.textPassword = new System.Windows.Forms.TextBox();
+            this.lblKeDaftar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,14 +86,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Email";
             // 
-            // textBox1
+            // textEmail
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(39, 160);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(468, 32);
-            this.textBox1.TabIndex = 4;
+            this.textEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textEmail.Location = new System.Drawing.Point(39, 160);
+            this.textEmail.Multiline = true;
+            this.textEmail.Name = "textEmail";
+            this.textEmail.Size = new System.Drawing.Size(468, 32);
+            this.textEmail.TabIndex = 4;
             // 
             // label4
             // 
@@ -117,70 +117,70 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Masuk Sebagai";
             // 
-            // comboBox1
+            // cmbRole
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.comboBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cmbRole.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
             "Pembeli",
             "Penjual"});
-            this.comboBox1.Location = new System.Drawing.Point(39, 314);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(467, 25);
-            this.comboBox1.TabIndex = 8;
+            this.cmbRole.Location = new System.Drawing.Point(39, 314);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(467, 25);
+            this.cmbRole.TabIndex = 8;
             // 
-            // button1
+            // btnMasuk
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(166, 350);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 44);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Masuk";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMasuk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMasuk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMasuk.ForeColor = System.Drawing.Color.Black;
+            this.btnMasuk.Location = new System.Drawing.Point(166, 350);
+            this.btnMasuk.Name = "btnMasuk";
+            this.btnMasuk.Size = new System.Drawing.Size(220, 44);
+            this.btnMasuk.TabIndex = 9;
+            this.btnMasuk.Text = "Masuk";
+            this.btnMasuk.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // textPassword
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.Location = new System.Drawing.Point(39, 236);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(468, 32);
-            this.textBox2.TabIndex = 10;
+            this.textPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textPassword.Location = new System.Drawing.Point(39, 236);
+            this.textPassword.Multiline = true;
+            this.textPassword.Name = "textPassword";
+            this.textPassword.Size = new System.Drawing.Size(468, 32);
+            this.textPassword.TabIndex = 10;
             // 
-            // label6
+            // lblKeDaftar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(187, 406);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 18);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Belum punya akun? Daftar";
+            this.lblKeDaftar.AutoSize = true;
+            this.lblKeDaftar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKeDaftar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblKeDaftar.Location = new System.Drawing.Point(187, 406);
+            this.lblKeDaftar.Name = "lblKeDaftar";
+            this.lblKeDaftar.Size = new System.Drawing.Size(181, 18);
+            this.lblKeDaftar.TabIndex = 11;
+            this.lblKeDaftar.Text = "Belum punya akun? Daftar";
             // 
-            // Form1
+            // Formlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(549, 450);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lblKeDaftar);
+            this.Controls.Add(this.textPassword);
+            this.Controls.Add(this.btnMasuk);
+            this.Controls.Add(this.cmbRole);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Formlogin";
+            this.Text = "Formlogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,13 +193,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbRole;
+        private System.Windows.Forms.Button btnMasuk;
+        private System.Windows.Forms.TextBox textPassword;
+        private System.Windows.Forms.Label lblKeDaftar;
     }
 }
-

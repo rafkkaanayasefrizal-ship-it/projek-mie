@@ -1,4 +1,4 @@
-﻿namespace projek_mie
+namespace projek_mie
 {
     partial class FormDashboard
     {
@@ -36,38 +36,38 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKeluar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblPesananAktif = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblTotalPesanan = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblTotalBelanja = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPesananKamu = new System.Windows.Forms.DataGridView();
             this.menu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.varian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPesanSekarang = new System.Windows.Forms.Button();
+            this.btnLihatRiwayat = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPesananKamu)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnKeluar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -140,17 +140,17 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Halo,Pembeli";
             // 
-            // button1
+            // btnKeluar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(657, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Keluar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnKeluar.BackColor = System.Drawing.Color.White;
+            this.btnKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKeluar.Location = new System.Drawing.Point(657, 9);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
+            this.btnKeluar.TabIndex = 7;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -177,7 +177,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.lblPesananAktif);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(29, 135);
             this.panel2.Name = "panel2";
@@ -187,7 +187,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.lblTotalPesanan);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Location = new System.Drawing.Point(277, 135);
             this.panel3.Name = "panel3";
@@ -197,7 +197,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.lblTotalBelanja);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Location = new System.Drawing.Point(532, 135);
             this.panel4.Name = "panel4";
@@ -215,16 +215,16 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Pesanan Aktif";
             // 
-            // label9
+            // lblPesananAktif
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(19, 57);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(20, 24);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "1";
+            this.lblPesananAktif.AutoSize = true;
+            this.lblPesananAktif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesananAktif.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblPesananAktif.Location = new System.Drawing.Point(19, 57);
+            this.lblPesananAktif.Name = "lblPesananAktif";
+            this.lblPesananAktif.Size = new System.Drawing.Size(20, 24);
+            this.lblPesananAktif.TabIndex = 14;
+            this.lblPesananAktif.Text = "1";
             // 
             // label10
             // 
@@ -237,16 +237,16 @@
             this.label10.TabIndex = 15;
             this.label10.Text = "Total Pesanan";
             // 
-            // label11
+            // lblTotalPesanan
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label11.Location = new System.Drawing.Point(19, 57);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(21, 24);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "2";
+            this.lblTotalPesanan.AutoSize = true;
+            this.lblTotalPesanan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPesanan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblTotalPesanan.Location = new System.Drawing.Point(19, 57);
+            this.lblTotalPesanan.Name = "lblTotalPesanan";
+            this.lblTotalPesanan.Size = new System.Drawing.Size(21, 24);
+            this.lblTotalPesanan.TabIndex = 16;
+            this.lblTotalPesanan.Text = "2";
             // 
             // label12
             // 
@@ -259,16 +259,16 @@
             this.label12.TabIndex = 17;
             this.label12.Text = "Total Belanja";
             // 
-            // label13
+            // lblTotalBelanja
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(17, 57);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 24);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Rp32.000";
+            this.lblTotalBelanja.AutoSize = true;
+            this.lblTotalBelanja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBelanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblTotalBelanja.Location = new System.Drawing.Point(17, 57);
+            this.lblTotalBelanja.Name = "lblTotalBelanja";
+            this.lblTotalBelanja.Size = new System.Drawing.Size(97, 24);
+            this.lblTotalBelanja.TabIndex = 18;
+            this.lblTotalBelanja.Text = "Rp32.000";
             // 
             // label15
             // 
@@ -281,22 +281,22 @@
             this.label15.TabIndex = 19;
             this.label15.Text = "Pesanan Kamu";
             // 
-            // dataGridView1
+            // dgvPesananKamu
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPesananKamu.AllowUserToAddRows = false;
+            this.dgvPesananKamu.AllowUserToDeleteRows = false;
+            this.dgvPesananKamu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPesananKamu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dgvPesananKamu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPesananKamu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.menu,
             this.varian,
             this.harga});
-            this.dataGridView1.Location = new System.Drawing.Point(29, 268);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(575, 150);
-            this.dataGridView1.TabIndex = 20;
+            this.dgvPesananKamu.Location = new System.Drawing.Point(29, 268);
+            this.dgvPesananKamu.Name = "dgvPesananKamu";
+            this.dgvPesananKamu.ReadOnly = true;
+            this.dgvPesananKamu.Size = new System.Drawing.Size(575, 150);
+            this.dgvPesananKamu.TabIndex = 20;
             // 
             // menu
             // 
@@ -316,25 +316,25 @@
             this.harga.Name = "harga";
             this.harga.ReadOnly = true;
             // 
-            // button2
+            // btnPesanSekarang
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(620, 268);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 36);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Pesan Sekarang";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPesanSekarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnPesanSekarang.Location = new System.Drawing.Point(620, 268);
+            this.btnPesanSekarang.Name = "btnPesanSekarang";
+            this.btnPesanSekarang.Size = new System.Drawing.Size(141, 36);
+            this.btnPesanSekarang.TabIndex = 21;
+            this.btnPesanSekarang.Text = "Pesan Sekarang";
+            this.btnPesanSekarang.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnLihatRiwayat
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(620, 320);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 36);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Lihat Riwayat";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnLihatRiwayat.BackColor = System.Drawing.Color.White;
+            this.btnLihatRiwayat.Location = new System.Drawing.Point(620, 320);
+            this.btnLihatRiwayat.Name = "btnLihatRiwayat";
+            this.btnLihatRiwayat.Size = new System.Drawing.Size(141, 36);
+            this.btnLihatRiwayat.TabIndex = 22;
+            this.btnLihatRiwayat.Text = "Lihat Riwayat";
+            this.btnLihatRiwayat.UseVisualStyleBackColor = false;
             // 
             // label16
             // 
@@ -353,9 +353,9 @@
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnLihatRiwayat);
+            this.Controls.Add(this.btnPesanSekarang);
+            this.Controls.Add(this.dgvPesananKamu);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -374,7 +374,7 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPesananKamu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,25 +389,25 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKeluar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPesananAktif;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblTotalPesanan;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTotalBelanja;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label15;
-        internal System.Windows.Forms.DataGridView dataGridView1;
+        internal System.Windows.Forms.DataGridView dgvPesananKamu;
         private System.Windows.Forms.DataGridViewTextBoxColumn menu;
         private System.Windows.Forms.DataGridViewTextBoxColumn varian;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPesanSekarang;
+        private System.Windows.Forms.Button btnLihatRiwayat;
         private System.Windows.Forms.Label label16;
     }
 }

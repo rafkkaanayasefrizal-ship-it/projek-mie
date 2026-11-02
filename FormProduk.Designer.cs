@@ -1,4 +1,4 @@
-﻿namespace projek_mie
+namespace projek_mie
 {
     partial class FormProduk
     {
@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProduk));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKeluar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProduk = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaProduk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.varian = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,17 +50,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textNamaProduk = new System.Windows.Forms.TextBox();
+            this.textHarga = new System.Windows.Forms.TextBox();
+            this.cmbVarian = new System.Windows.Forms.ComboBox();
+            this.btnTambah = new System.Windows.Forms.Button();
+            this.btnUbah = new System.Windows.Forms.Button();
+            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnBersihkan = new System.Windows.Forms.Button();
+            this.textCariProduk = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduk)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnKeluar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -90,17 +90,17 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Kategori";
             // 
-            // button1
+            // btnKeluar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(683, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Keluar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnKeluar.BackColor = System.Drawing.Color.White;
+            this.btnKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnKeluar.Location = new System.Drawing.Point(683, 9);
+            this.btnKeluar.Name = "btnKeluar";
+            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
+            this.btnKeluar.TabIndex = 7;
+            this.btnKeluar.Text = "Keluar";
+            this.btnKeluar.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -185,23 +185,23 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Tambah,ubah,atau,hapus data produk.";
             // 
-            // dataGridView1
+            // dgvProduk
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProduk.AllowUserToAddRows = false;
+            this.dgvProduk.AllowUserToDeleteRows = false;
+            this.dgvProduk.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProduk.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvProduk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduk.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.namaProduk,
             this.varian,
             this.harga});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 144);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(469, 150);
-            this.dataGridView1.TabIndex = 13;
+            this.dgvProduk.Location = new System.Drawing.Point(16, 144);
+            this.dgvProduk.Name = "dgvProduk";
+            this.dgvProduk.ReadOnly = true;
+            this.dgvProduk.Size = new System.Drawing.Size(469, 150);
+            this.dgvProduk.TabIndex = 13;
             // 
             // id
             // 
@@ -229,13 +229,13 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.btnBersihkan);
+            this.panel2.Controls.Add(this.btnHapus);
+            this.panel2.Controls.Add(this.btnUbah);
+            this.panel2.Controls.Add(this.btnTambah);
+            this.panel2.Controls.Add(this.cmbVarian);
+            this.panel2.Controls.Add(this.textHarga);
+            this.panel2.Controls.Add(this.textNamaProduk);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
@@ -262,9 +262,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label10.Location = new System.Drawing.Point(3, 39);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 13;
-            this.label10.Text = "Tanggal";
+            this.label10.Text = "Nama Produk";
             // 
             // label11
             // 
@@ -286,83 +286,83 @@
             this.label12.TabIndex = 15;
             this.label12.Text = "Harga";
             // 
-            // textBox1
+            // textNamaProduk
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Location = new System.Drawing.Point(6, 55);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 26);
-            this.textBox1.TabIndex = 16;
+            this.textNamaProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textNamaProduk.Location = new System.Drawing.Point(6, 55);
+            this.textNamaProduk.Multiline = true;
+            this.textNamaProduk.Name = "textNamaProduk";
+            this.textNamaProduk.Size = new System.Drawing.Size(263, 26);
+            this.textNamaProduk.TabIndex = 16;
             // 
-            // textBox2
+            // textHarga
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.Location = new System.Drawing.Point(6, 167);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 26);
-            this.textBox2.TabIndex = 17;
+            this.textHarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textHarga.Location = new System.Drawing.Point(6, 167);
+            this.textHarga.Multiline = true;
+            this.textHarga.Name = "textHarga";
+            this.textHarga.Size = new System.Drawing.Size(263, 26);
+            this.textHarga.TabIndex = 17;
             // 
-            // comboBox1
+            // cmbVarian
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbVarian.FormattingEnabled = true;
+            this.cmbVarian.Items.AddRange(new object[] {
             "Rebus",
             "Goreng"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 112);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 21);
-            this.comboBox1.TabIndex = 18;
+            this.cmbVarian.Location = new System.Drawing.Point(6, 112);
+            this.cmbVarian.Name = "cmbVarian";
+            this.cmbVarian.Size = new System.Drawing.Size(263, 21);
+            this.cmbVarian.TabIndex = 18;
             // 
-            // button2
+            // btnTambah
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Location = new System.Drawing.Point(6, 228);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 29);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Tambah";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnTambah.Location = new System.Drawing.Point(6, 228);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(59, 29);
+            this.btnTambah.TabIndex = 19;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnUbah
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(80, 228);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(59, 29);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Ubah";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnUbah.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUbah.Location = new System.Drawing.Point(80, 228);
+            this.btnUbah.Name = "btnUbah";
+            this.btnUbah.Size = new System.Drawing.Size(59, 29);
+            this.btnUbah.TabIndex = 20;
+            this.btnUbah.Text = "Ubah";
+            this.btnUbah.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnHapus
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(145, 228);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(59, 29);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Hapus";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnHapus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnHapus.Location = new System.Drawing.Point(145, 228);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(59, 29);
+            this.btnHapus.TabIndex = 21;
+            this.btnHapus.Text = "Hapus";
+            this.btnHapus.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnBersihkan
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(220, 228);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(62, 29);
-            this.button5.TabIndex = 22;
-            this.button5.Text = "Bersihkan";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnBersihkan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBersihkan.Location = new System.Drawing.Point(220, 228);
+            this.btnBersihkan.Name = "btnBersihkan";
+            this.btnBersihkan.Size = new System.Drawing.Size(62, 29);
+            this.btnBersihkan.TabIndex = 22;
+            this.btnBersihkan.Text = "Bersihkan";
+            this.btnBersihkan.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // textCariProduk
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.Location = new System.Drawing.Point(628, 86);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 26);
-            this.textBox3.TabIndex = 23;
+            this.textCariProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textCariProduk.Location = new System.Drawing.Point(620, 86);
+            this.textCariProduk.Multiline = true;
+            this.textCariProduk.Name = "textCariProduk";
+            this.textCariProduk.Size = new System.Drawing.Size(160, 26);
+            this.textCariProduk.TabIndex = 24;
             // 
             // FormProduk
             // 
@@ -370,9 +370,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textCariProduk);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProduk);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
@@ -381,7 +381,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduk)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -393,7 +393,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKeluar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -402,7 +402,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProduk;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaProduk;
         private System.Windows.Forms.DataGridViewTextBoxColumn varian;
@@ -412,13 +412,13 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textNamaProduk;
+        private System.Windows.Forms.Button btnBersihkan;
+        private System.Windows.Forms.Button btnHapus;
+        private System.Windows.Forms.Button btnUbah;
+        private System.Windows.Forms.Button btnTambah;
+        private System.Windows.Forms.ComboBox cmbVarian;
+        private System.Windows.Forms.TextBox textHarga;
+        private System.Windows.Forms.TextBox textCariProduk;
     }
 }
