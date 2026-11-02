@@ -29,63 +29,63 @@ namespace projek_mie
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTopings));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.panelNavbar = new System.Windows.Forms.Panel();
+            this.lblNavKategori = new System.Windows.Forms.Label();
             this.btnKeluar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblUserGreeting = new System.Windows.Forms.Label();
+            this.lblNavTopings = new System.Windows.Forms.Label();
+            this.lblNavProduk = new System.Windows.Forms.Label();
+            this.lblNavDashboard = new System.Windows.Forms.Label();
+            this.lblBrand = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.lblJudulPage = new System.Windows.Forms.Label();
+            this.lblSubJudulPage = new System.Windows.Forms.Label();
             this.dgvTopings = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaTopings = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelFormInput = new System.Windows.Forms.Panel();
             this.btnBersihkan = new System.Windows.Forms.Button();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnUbah = new System.Windows.Forms.Button();
             this.btnTambah = new System.Windows.Forms.Button();
             this.textHargaTopings = new System.Windows.Forms.TextBox();
             this.textNamaTopings = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblHarga = new System.Windows.Forms.Label();
+            this.lblNamaTopping = new System.Windows.Forms.Label();
+            this.lblFormHeader = new System.Windows.Forms.Label();
             this.textCariTopings = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelNavbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopings)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelFormInput.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelNavbar
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.btnKeluar);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 40);
-            this.panel1.TabIndex = 4;
+            this.panelNavbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelNavbar.Controls.Add(this.lblNavKategori);
+            this.panelNavbar.Controls.Add(this.btnKeluar);
+            this.panelNavbar.Controls.Add(this.lblUserGreeting);
+            this.panelNavbar.Controls.Add(this.lblNavTopings);
+            this.panelNavbar.Controls.Add(this.lblNavProduk);
+            this.panelNavbar.Controls.Add(this.lblNavDashboard);
+            this.panelNavbar.Controls.Add(this.lblBrand);
+            this.panelNavbar.Controls.Add(this.picLogo);
+            this.panelNavbar.Location = new System.Drawing.Point(12, 12);
+            this.panelNavbar.Name = "panelNavbar";
+            this.panelNavbar.Size = new System.Drawing.Size(776, 40);
+            this.panelNavbar.TabIndex = 4;
             // 
-            // label6
+            // lblNavKategori
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(409, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Kategori";
+            this.lblNavKategori.AutoSize = true;
+            this.lblNavKategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNavKategori.Location = new System.Drawing.Point(409, 15);
+            this.lblNavKategori.Name = "lblNavKategori";
+            this.lblNavKategori.Size = new System.Drawing.Size(46, 13);
+            this.lblNavKategori.TabIndex = 8;
+            this.lblNavKategori.Text = "Kategori";
             // 
             // btnKeluar
             // 
@@ -99,88 +99,88 @@ namespace projek_mie
             this.btnKeluar.Text = "Keluar";
             this.btnKeluar.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // lblUserGreeting
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(575, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Halo,Pembeli";
+            this.lblUserGreeting.AutoSize = true;
+            this.lblUserGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblUserGreeting.Location = new System.Drawing.Point(575, 15);
+            this.lblUserGreeting.Name = "lblUserGreeting";
+            this.lblUserGreeting.Size = new System.Drawing.Size(69, 13);
+            this.lblUserGreeting.TabIndex = 6;
+            this.lblUserGreeting.Text = "Halo,Pembeli";
             // 
-            // label4
+            // lblNavTopings
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(344, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Topings";
+            this.lblNavTopings.AutoSize = true;
+            this.lblNavTopings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNavTopings.Location = new System.Drawing.Point(344, 15);
+            this.lblNavTopings.Name = "lblNavTopings";
+            this.lblNavTopings.Size = new System.Drawing.Size(45, 13);
+            this.lblNavTopings.TabIndex = 5;
+            this.lblNavTopings.Text = "Topings";
             // 
-            // label3
+            // lblNavProduk
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(283, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Produk";
+            this.lblNavProduk.AutoSize = true;
+            this.lblNavProduk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNavProduk.Location = new System.Drawing.Point(283, 15);
+            this.lblNavProduk.Name = "lblNavProduk";
+            this.lblNavProduk.Size = new System.Drawing.Size(41, 13);
+            this.lblNavProduk.TabIndex = 4;
+            this.lblNavProduk.Text = "Produk";
             // 
-            // label2
+            // lblNavDashboard
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(199, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Dashboard";
+            this.lblNavDashboard.AutoSize = true;
+            this.lblNavDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNavDashboard.Location = new System.Drawing.Point(199, 15);
+            this.lblNavDashboard.Name = "lblNavDashboard";
+            this.lblNavDashboard.Size = new System.Drawing.Size(59, 13);
+            this.lblNavDashboard.TabIndex = 3;
+            this.lblNavDashboard.Text = "Dashboard";
             // 
-            // label1
+            // lblBrand
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(70, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "NieNoodle";
+            this.lblBrand.AutoSize = true;
+            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblBrand.Location = new System.Drawing.Point(70, 13);
+            this.lblBrand.Name = "lblBrand";
+            this.lblBrand.Size = new System.Drawing.Size(75, 15);
+            this.lblBrand.TabIndex = 2;
+            this.lblBrand.Text = "NieNoodle";
             // 
-            // pictureBox1
+            // picLogo
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.Location = new System.Drawing.Point(12, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(52, 41);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 1;
+            this.picLogo.TabStop = false;
             // 
-            // label7
+            // lblJudulPage
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(117, 20);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Data Topings";
+            this.lblJudulPage.AutoSize = true;
+            this.lblJudulPage.BackColor = System.Drawing.Color.Transparent;
+            this.lblJudulPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJudulPage.Location = new System.Drawing.Point(12, 73);
+            this.lblJudulPage.Name = "lblJudulPage";
+            this.lblJudulPage.Size = new System.Drawing.Size(117, 20);
+            this.lblJudulPage.TabIndex = 11;
+            this.lblJudulPage.Text = "Data Topings";
             // 
-            // label8
+            // lblSubJudulPage
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(13, 93);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(221, 15);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Tambah,ubah,atau,hapus data topings\r\n";
+            this.lblSubJudulPage.AutoSize = true;
+            this.lblSubJudulPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubJudulPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblSubJudulPage.Location = new System.Drawing.Point(13, 93);
+            this.lblSubJudulPage.Name = "lblSubJudulPage";
+            this.lblSubJudulPage.Size = new System.Drawing.Size(221, 15);
+            this.lblSubJudulPage.TabIndex = 13;
+            this.lblSubJudulPage.Text = "Tambah,ubah,atau,hapus data topings\r\n";
             // 
             // dgvTopings
             // 
@@ -217,21 +217,21 @@ namespace projek_mie
             this.harga.Name = "harga";
             this.harga.ReadOnly = true;
             // 
-            // panel2
+            // panelFormInput
             // 
-            this.panel2.Controls.Add(this.btnBersihkan);
-            this.panel2.Controls.Add(this.btnHapus);
-            this.panel2.Controls.Add(this.btnUbah);
-            this.panel2.Controls.Add(this.btnTambah);
-            this.panel2.Controls.Add(this.textHargaTopings);
-            this.panel2.Controls.Add(this.textNamaTopings);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(501, 127);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(287, 271);
-            this.panel2.TabIndex = 15;
+            this.panelFormInput.Controls.Add(this.btnBersihkan);
+            this.panelFormInput.Controls.Add(this.btnHapus);
+            this.panelFormInput.Controls.Add(this.btnUbah);
+            this.panelFormInput.Controls.Add(this.btnTambah);
+            this.panelFormInput.Controls.Add(this.textHargaTopings);
+            this.panelFormInput.Controls.Add(this.textNamaTopings);
+            this.panelFormInput.Controls.Add(this.lblHarga);
+            this.panelFormInput.Controls.Add(this.lblNamaTopping);
+            this.panelFormInput.Controls.Add(this.lblFormHeader);
+            this.panelFormInput.Location = new System.Drawing.Point(501, 127);
+            this.panelFormInput.Name = "panelFormInput";
+            this.panelFormInput.Size = new System.Drawing.Size(287, 271);
+            this.panelFormInput.TabIndex = 15;
             // 
             // btnBersihkan
             // 
@@ -291,36 +291,36 @@ namespace projek_mie
             this.textNamaTopings.Size = new System.Drawing.Size(263, 26);
             this.textNamaTopings.TabIndex = 16;
             // 
-            // label12
+            // lblHarga
             // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(3, 101);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Harga";
+            this.lblHarga.AutoSize = true;
+            this.lblHarga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblHarga.Location = new System.Drawing.Point(3, 101);
+            this.lblHarga.Name = "lblHarga";
+            this.lblHarga.Size = new System.Drawing.Size(36, 13);
+            this.lblHarga.TabIndex = 15;
+            this.lblHarga.Text = "Harga";
             // 
-            // label10
+            // lblNamaTopping
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(3, 39);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(77, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Nama Topping";
+            this.lblNamaTopping.AutoSize = true;
+            this.lblNamaTopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblNamaTopping.Location = new System.Drawing.Point(3, 39);
+            this.lblNamaTopping.Name = "lblNamaTopping";
+            this.lblNamaTopping.Size = new System.Drawing.Size(77, 13);
+            this.lblNamaTopping.TabIndex = 13;
+            this.lblNamaTopping.Text = "Nama Topping";
             // 
-            // label9
+            // lblFormHeader
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(3, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 15);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Detail Topings";
+            this.lblFormHeader.AutoSize = true;
+            this.lblFormHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblFormHeader.Location = new System.Drawing.Point(3, 11);
+            this.lblFormHeader.Name = "lblFormHeader";
+            this.lblFormHeader.Size = new System.Drawing.Size(100, 15);
+            this.lblFormHeader.TabIndex = 9;
+            this.lblFormHeader.Text = "Detail Topings";
             // 
             // textCariTopings
             // 
@@ -338,19 +338,19 @@ namespace projek_mie
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textCariTopings);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelFormInput);
             this.Controls.Add(this.dgvTopings);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblSubJudulPage);
+            this.Controls.Add(this.lblJudulPage);
+            this.Controls.Add(this.panelNavbar);
             this.Name = "FormTopings";
             this.Text = "FormTopings";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelNavbar.ResumeLayout(false);
+            this.panelNavbar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopings)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelFormInput.ResumeLayout(false);
+            this.panelFormInput.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,31 +358,31 @@ namespace projek_mie
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panelNavbar;
+        private System.Windows.Forms.Label lblNavKategori;
         private System.Windows.Forms.Button btnKeluar;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblUserGreeting;
+        private System.Windows.Forms.Label lblNavTopings;
+        private System.Windows.Forms.Label lblNavProduk;
+        private System.Windows.Forms.Label lblNavDashboard;
+        private System.Windows.Forms.Label lblBrand;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Label lblJudulPage;
+        private System.Windows.Forms.Label lblSubJudulPage;
         private System.Windows.Forms.DataGridView dgvTopings;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn namaTopings;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelFormInput;
         private System.Windows.Forms.Button btnBersihkan;
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnUbah;
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.TextBox textHargaTopings;
         private System.Windows.Forms.TextBox textNamaTopings;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblHarga;
+        private System.Windows.Forms.Label lblNamaTopping;
+        private System.Windows.Forms.Label lblFormHeader;
         private System.Windows.Forms.TextBox textCariTopings;
     }
 }

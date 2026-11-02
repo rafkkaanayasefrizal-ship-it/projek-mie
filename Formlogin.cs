@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +17,7 @@ namespace projek_mie
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblSubJudul_Click(object sender, EventArgs e)
         {
 
         }
