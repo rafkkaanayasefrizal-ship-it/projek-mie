@@ -68,6 +68,7 @@
             this.btnKeluar.TabIndex = 7;
             this.btnKeluar.Text = "Keluar";
             this.btnKeluar.UseVisualStyleBackColor = false;
+            this.btnKeluar.Click += new System.EventHandler(this.btnKeluar_Click);
             // 
             // lblUserGreeting
             // 
@@ -88,6 +89,7 @@
             this.lblNavRiwayat.Size = new System.Drawing.Size(45, 13);
             this.lblNavRiwayat.TabIndex = 5;
             this.lblNavRiwayat.Text = "Riwayat";
+            this.lblNavRiwayat.Click += new System.EventHandler(this.lblNavRiwayat_Click);
             // 
             // lblNavPesan
             // 
@@ -98,6 +100,7 @@
             this.lblNavPesan.Size = new System.Drawing.Size(37, 13);
             this.lblNavPesan.TabIndex = 4;
             this.lblNavPesan.Text = "Pesan";
+            this.lblNavPesan.Click += new System.EventHandler(this.lblNavPesan_Click);
             // 
             // lblNavDashboard
             // 
@@ -138,8 +141,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelNavbar);
+            this.IsMdiContainer = true;
             this.Name = "formNav";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.formNav_Load);
             this.panelNavbar.ResumeLayout(false);
             this.panelNavbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

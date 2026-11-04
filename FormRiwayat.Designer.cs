@@ -28,15 +28,6 @@ namespace projek_mie
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRiwayat));
-            this.panelNavbar = new System.Windows.Forms.Panel();
-            this.btnKeluar = new System.Windows.Forms.Button();
-            this.lblUserGreeting = new System.Windows.Forms.Label();
-            this.lblNavRiwayat = new System.Windows.Forms.Label();
-            this.lblNavPesan = new System.Windows.Forms.Label();
-            this.lblNavDashboard = new System.Windows.Forms.Label();
-            this.lblBrand = new System.Windows.Forms.Label();
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblJudulPage = new System.Windows.Forms.Label();
             this.lblSubJudulPage = new System.Windows.Forms.Label();
             this.dtpTanggal = new System.Windows.Forms.DateTimePicker();
@@ -52,107 +43,15 @@ namespace projek_mie
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTotalBelanja = new System.Windows.Forms.Label();
             this.lblTotalBelanjaTitle = new System.Windows.Forms.Label();
-            this.panelNavbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayat)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelNavbar
-            // 
-            this.panelNavbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panelNavbar.Controls.Add(this.btnKeluar);
-            this.panelNavbar.Controls.Add(this.lblUserGreeting);
-            this.panelNavbar.Controls.Add(this.lblNavRiwayat);
-            this.panelNavbar.Controls.Add(this.lblNavPesan);
-            this.panelNavbar.Controls.Add(this.lblNavDashboard);
-            this.panelNavbar.Controls.Add(this.lblBrand);
-            this.panelNavbar.Controls.Add(this.picLogo);
-            this.panelNavbar.Location = new System.Drawing.Point(25, 12);
-            this.panelNavbar.Name = "panelNavbar";
-            this.panelNavbar.Size = new System.Drawing.Size(748, 40);
-            this.panelNavbar.TabIndex = 1;
-            // 
-            // btnKeluar
-            // 
-            this.btnKeluar.BackColor = System.Drawing.Color.White;
-            this.btnKeluar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKeluar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnKeluar.Location = new System.Drawing.Point(657, 9);
-            this.btnKeluar.Name = "btnKeluar";
-            this.btnKeluar.Size = new System.Drawing.Size(75, 23);
-            this.btnKeluar.TabIndex = 7;
-            this.btnKeluar.Text = "Keluar";
-            this.btnKeluar.UseVisualStyleBackColor = false;
-            // 
-            // lblUserGreeting
-            // 
-            this.lblUserGreeting.AutoSize = true;
-            this.lblUserGreeting.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblUserGreeting.Location = new System.Drawing.Point(557, 15);
-            this.lblUserGreeting.Name = "lblUserGreeting";
-            this.lblUserGreeting.Size = new System.Drawing.Size(69, 13);
-            this.lblUserGreeting.TabIndex = 6;
-            this.lblUserGreeting.Text = "Halo,Pembeli";
-            // 
-            // lblNavRiwayat
-            // 
-            this.lblNavRiwayat.AutoSize = true;
-            this.lblNavRiwayat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblNavRiwayat.Location = new System.Drawing.Point(344, 15);
-            this.lblNavRiwayat.Name = "lblNavRiwayat";
-            this.lblNavRiwayat.Size = new System.Drawing.Size(45, 13);
-            this.lblNavRiwayat.TabIndex = 5;
-            this.lblNavRiwayat.Text = "Riwayat";
-            // 
-            // lblNavPesan
-            // 
-            this.lblNavPesan.AutoSize = true;
-            this.lblNavPesan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblNavPesan.Location = new System.Drawing.Point(283, 15);
-            this.lblNavPesan.Name = "lblNavPesan";
-            this.lblNavPesan.Size = new System.Drawing.Size(37, 13);
-            this.lblNavPesan.TabIndex = 4;
-            this.lblNavPesan.Text = "Pesan";
-            this.lblNavPesan.Click += new System.EventHandler(this.lblNavPesan_Click);
-            // 
-            // lblNavDashboard
-            // 
-            this.lblNavDashboard.AutoSize = true;
-            this.lblNavDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblNavDashboard.Location = new System.Drawing.Point(199, 15);
-            this.lblNavDashboard.Name = "lblNavDashboard";
-            this.lblNavDashboard.Size = new System.Drawing.Size(59, 13);
-            this.lblNavDashboard.TabIndex = 3;
-            this.lblNavDashboard.Text = "Dashboard";
-            this.lblNavDashboard.Click += new System.EventHandler(this.lblNavDashboard_Click);
-            // 
-            // lblBrand
-            // 
-            this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblBrand.Location = new System.Drawing.Point(70, 13);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(75, 15);
-            this.lblBrand.TabIndex = 2;
-            this.lblBrand.Text = "NieNoodle";
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(12, 0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(52, 41);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 1;
-            this.picLogo.TabStop = false;
             // 
             // lblJudulPage
             // 
             this.lblJudulPage.AutoSize = true;
             this.lblJudulPage.BackColor = System.Drawing.Color.Transparent;
             this.lblJudulPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJudulPage.Location = new System.Drawing.Point(21, 81);
+            this.lblJudulPage.Location = new System.Drawing.Point(21, 9);
             this.lblJudulPage.Name = "lblJudulPage";
             this.lblJudulPage.Size = new System.Drawing.Size(147, 20);
             this.lblJudulPage.TabIndex = 9;
@@ -163,7 +62,7 @@ namespace projek_mie
             this.lblSubJudulPage.AutoSize = true;
             this.lblSubJudulPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubJudulPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblSubJudulPage.Location = new System.Drawing.Point(22, 101);
+            this.lblSubJudulPage.Location = new System.Drawing.Point(22, 44);
             this.lblSubJudulPage.Name = "lblSubJudulPage";
             this.lblSubJudulPage.Size = new System.Drawing.Size(230, 15);
             this.lblSubJudulPage.TabIndex = 10;
@@ -180,7 +79,7 @@ namespace projek_mie
             // 
             this.lblTanggal.AutoSize = true;
             this.lblTanggal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTanggal.Location = new System.Drawing.Point(22, 130);
+            this.lblTanggal.Location = new System.Drawing.Point(22, 76);
             this.lblTanggal.Name = "lblTanggal";
             this.lblTanggal.Size = new System.Drawing.Size(46, 13);
             this.lblTanggal.TabIndex = 12;
@@ -293,7 +192,7 @@ namespace projek_mie
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.lblTotalBelanjaTitle);
             this.Controls.Add(this.lblTotalBelanja);
             this.Controls.Add(this.dgvRiwayat);
@@ -304,12 +203,8 @@ namespace projek_mie
             this.Controls.Add(this.dtpTanggal);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
-            this.Controls.Add(this.panelNavbar);
             this.Name = "FormRiwayat";
             this.Text = "FormRiwayat";
-            this.panelNavbar.ResumeLayout(false);
-            this.panelNavbar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,15 +212,6 @@ namespace projek_mie
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelNavbar;
-        private System.Windows.Forms.Button btnKeluar;
-        private System.Windows.Forms.Label lblUserGreeting;
-        private System.Windows.Forms.Label lblNavRiwayat;
-        private System.Windows.Forms.Label lblNavPesan;
-        private System.Windows.Forms.Label lblNavDashboard;
-        private System.Windows.Forms.Label lblBrand;
-        private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label lblJudulPage;
         private System.Windows.Forms.Label lblSubJudulPage;
         private System.Windows.Forms.DateTimePicker dtpTanggal;
