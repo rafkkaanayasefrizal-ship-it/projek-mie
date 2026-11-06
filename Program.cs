@@ -16,7 +16,7 @@ namespace projek_mie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formNav());
+            Application.Run(new FormNavpenjual());
         }
     }
 }
