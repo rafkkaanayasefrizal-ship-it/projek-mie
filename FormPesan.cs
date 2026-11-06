@@ -13,7 +13,7 @@ namespace projek_mie
     public partial class FormPesan : Form
     {
         public FormPesan()
-        {
+        {   
             InitializeComponent();
         }
     }
