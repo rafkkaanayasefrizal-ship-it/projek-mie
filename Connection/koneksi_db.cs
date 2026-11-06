@@ -23,7 +23,7 @@ namespace projek_mie.Connection
         public static string Port = "3306";
         public static string User = "root";
         public static string Password = "";
-        public static string Database = "db_mie";
+        public static string Database = "mie";
 
         private static string defaultConnectionString =
             $"server={Server};port={Port};uid={User};pwd={Password};database={Database};Charset=utf8mb4;";
