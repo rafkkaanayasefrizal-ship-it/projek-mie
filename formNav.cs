@@ -28,6 +28,7 @@ namespace projek_mie
             formLogin.FormClosed += (s, args) => Show();
             Hide();
             formLogin.Show();
+            
         }
 
         private void lblNavDashboard_Click(object sender, EventArgs e)

@@ -82,6 +82,12 @@
     <Compile Include="FormDaftar.Designer.cs">
       <DependentUpon>FormDaftar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNavpenjual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNavpenjual.Designer.cs">
+      <DependentUpon>FormNavpenjual.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPesan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formNav.resx">
       <DependentUpon>formNav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNavpenjual.resx">
+      <DependentUpon>FormNavpenjual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesan.resx">
       <DependentUpon>FormPesan.cs</DependentUpon>
