@@ -76,7 +76,7 @@ namespace projek_mie
                 using (MySqlConnection conn = db.GetConnection())
                 {
                     conn.Open();
-                    string query = "INSERT INTO kategori (nama_kategori) VALUES (@nama)";
+                    string query = "INSERT INTO kateudahgori (nama_kategori) VALUES (@nama)";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nama", textNamaKategori.Text.Trim());
                     cmd.ExecuteNonQuery();
