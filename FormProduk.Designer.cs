@@ -2,15 +2,8 @@ namespace projek_mie
 {
     partial class FormProduk
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@ namespace projek_mie
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblJudulPage = new System.Windows.Forms.Label();
@@ -35,7 +24,10 @@ namespace projek_mie
             this.namaProduk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.varian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stok = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelFormInput = new System.Windows.Forms.Panel();
+            this.textStok = new System.Windows.Forms.TextBox();
+            this.lblStok = new System.Windows.Forms.Label();
             this.btnBersihkan = new System.Windows.Forms.Button();
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnUbah = new System.Windows.Forms.Button();
@@ -72,7 +64,7 @@ namespace projek_mie
             this.lblSubJudulPage.Name = "lblSubJudulPage";
             this.lblSubJudulPage.Size = new System.Drawing.Size(219, 15);
             this.lblSubJudulPage.TabIndex = 12;
-            this.lblSubJudulPage.Text = "Tambah,ubah,atau,hapus data produk.";
+            this.lblSubJudulPage.Text = "Tambah, ubah, atur stok, atau hapus produk.";
             // 
             // dgvProduk
             // 
@@ -85,11 +77,12 @@ namespace projek_mie
             this.id,
             this.namaProduk,
             this.varian,
-            this.harga});
+            this.harga,
+            this.stok});
             this.dgvProduk.Location = new System.Drawing.Point(16, 46);
             this.dgvProduk.Name = "dgvProduk";
             this.dgvProduk.ReadOnly = true;
-            this.dgvProduk.Size = new System.Drawing.Size(469, 150);
+            this.dgvProduk.Size = new System.Drawing.Size(469, 260);
             this.dgvProduk.TabIndex = 13;
             // 
             // id
@@ -116,8 +109,16 @@ namespace projek_mie
             this.harga.Name = "harga";
             this.harga.ReadOnly = true;
             // 
+            // stok
+            // 
+            this.stok.HeaderText = "Stok";
+            this.stok.Name = "stok";
+            this.stok.ReadOnly = true;
+            // 
             // panelFormInput
             // 
+            this.panelFormInput.Controls.Add(this.textStok);
+            this.panelFormInput.Controls.Add(this.lblStok);
             this.panelFormInput.Controls.Add(this.btnBersihkan);
             this.panelFormInput.Controls.Add(this.btnHapus);
             this.panelFormInput.Controls.Add(this.btnUbah);
@@ -131,15 +132,35 @@ namespace projek_mie
             this.panelFormInput.Controls.Add(this.lblFormHeader);
             this.panelFormInput.Location = new System.Drawing.Point(501, 46);
             this.panelFormInput.Name = "panelFormInput";
-            this.panelFormInput.Size = new System.Drawing.Size(287, 271);
+            this.panelFormInput.Size = new System.Drawing.Size(287, 330);
             this.panelFormInput.TabIndex = 14;
+            // 
+            // lblStok
+            // 
+            this.lblStok.AutoSize = true;
+            this.lblStok.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lblStok.Location = new System.Drawing.Point(3, 206);
+            this.lblStok.Name = "lblStok";
+            this.lblStok.Size = new System.Drawing.Size(29, 13);
+            this.lblStok.TabIndex = 23;
+            this.lblStok.Text = "Stok";
+            // 
+            // textStok
+            // 
+            this.textStok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textStok.Location = new System.Drawing.Point(6, 222);
+            this.textStok.Multiline = false;
+            this.textStok.Name = "textStok";
+            this.textStok.Size = new System.Drawing.Size(263, 24);
+            this.textStok.TabIndex = 24;
             // 
             // btnBersihkan
             // 
             this.btnBersihkan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBersihkan.Location = new System.Drawing.Point(220, 228);
+            this.btnBersihkan.Location = new System.Drawing.Point(210, 265);
             this.btnBersihkan.Name = "btnBersihkan";
-            this.btnBersihkan.Size = new System.Drawing.Size(62, 29);
+            this.btnBersihkan.Size = new System.Drawing.Size(65, 29);
             this.btnBersihkan.TabIndex = 22;
             this.btnBersihkan.Text = "Bersihkan";
             this.btnBersihkan.UseVisualStyleBackColor = false;
@@ -147,7 +168,7 @@ namespace projek_mie
             // btnHapus
             // 
             this.btnHapus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHapus.Location = new System.Drawing.Point(145, 228);
+            this.btnHapus.Location = new System.Drawing.Point(142, 265);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(59, 29);
             this.btnHapus.TabIndex = 21;
@@ -157,7 +178,7 @@ namespace projek_mie
             // btnUbah
             // 
             this.btnUbah.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUbah.Location = new System.Drawing.Point(80, 228);
+            this.btnUbah.Location = new System.Drawing.Point(74, 265);
             this.btnUbah.Name = "btnUbah";
             this.btnUbah.Size = new System.Drawing.Size(59, 29);
             this.btnUbah.TabIndex = 20;
@@ -167,7 +188,7 @@ namespace projek_mie
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnTambah.Location = new System.Drawing.Point(6, 228);
+            this.btnTambah.Location = new System.Drawing.Point(6, 265);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(59, 29);
             this.btnTambah.TabIndex = 19;
@@ -176,31 +197,34 @@ namespace projek_mie
             // 
             // cmbVarian
             // 
+            this.cmbVarian.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVarian.FormattingEnabled = true;
             this.cmbVarian.Items.AddRange(new object[] {
             "Rebus",
             "Goreng"});
             this.cmbVarian.Location = new System.Drawing.Point(6, 112);
             this.cmbVarian.Name = "cmbVarian";
-            this.cmbVarian.Size = new System.Drawing.Size(263, 21);
+            this.cmbVarian.Size = new System.Drawing.Size(263, 24);
             this.cmbVarian.TabIndex = 18;
             // 
             // textHarga
             // 
             this.textHarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHarga.Location = new System.Drawing.Point(6, 167);
-            this.textHarga.Multiline = true;
+            this.textHarga.Multiline = false;
             this.textHarga.Name = "textHarga";
-            this.textHarga.Size = new System.Drawing.Size(263, 26);
+            this.textHarga.Size = new System.Drawing.Size(263, 24);
             this.textHarga.TabIndex = 17;
             // 
             // textNamaProduk
             // 
             this.textNamaProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textNamaProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNamaProduk.Location = new System.Drawing.Point(6, 55);
-            this.textNamaProduk.Multiline = true;
+            this.textNamaProduk.Multiline = false;
             this.textNamaProduk.Name = "textNamaProduk";
-            this.textNamaProduk.Size = new System.Drawing.Size(263, 26);
+            this.textNamaProduk.Size = new System.Drawing.Size(263, 24);
             this.textNamaProduk.TabIndex = 16;
             // 
             // lblHarga
@@ -240,23 +264,25 @@ namespace projek_mie
             this.lblFormHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblFormHeader.Location = new System.Drawing.Point(3, 11);
             this.lblFormHeader.Name = "lblFormHeader";
-            this.lblFormHeader.Size = new System.Drawing.Size(90, 15);
+            this.lblFormHeader.Size = new System.Drawing.Size(95, 15);
             this.lblFormHeader.TabIndex = 9;
-            this.lblFormHeader.Text = "DetailProduk";
+            this.lblFormHeader.Text = "Detail Produk";
             // 
             // textCariProduk
             // 
             this.textCariProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textCariProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCariProduk.Location = new System.Drawing.Point(623, 9);
-            this.textCariProduk.Multiline = true;
+            this.textCariProduk.Multiline = false;
             this.textCariProduk.Name = "textCariProduk";
-            this.textCariProduk.Size = new System.Drawing.Size(160, 26);
+            this.textCariProduk.Size = new System.Drawing.Size(160, 24);
             this.textCariProduk.TabIndex = 24;
             // 
             // FormProduk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textCariProduk);
@@ -282,11 +308,14 @@ namespace projek_mie
         private System.Windows.Forms.DataGridViewTextBoxColumn namaProduk;
         private System.Windows.Forms.DataGridViewTextBoxColumn varian;
         private System.Windows.Forms.DataGridViewTextBoxColumn harga;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stok;
         private System.Windows.Forms.Panel panelFormInput;
         private System.Windows.Forms.Label lblFormHeader;
         private System.Windows.Forms.Label lblHarga;
         private System.Windows.Forms.Label lblVarian;
         private System.Windows.Forms.Label lblNamaProduk;
+        private System.Windows.Forms.Label lblStok;
+        private System.Windows.Forms.TextBox textStok;
         private System.Windows.Forms.TextBox textNamaProduk;
         private System.Windows.Forms.Button btnBersihkan;
         private System.Windows.Forms.Button btnHapus;

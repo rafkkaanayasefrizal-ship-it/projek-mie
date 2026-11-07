@@ -1,98 +1,124 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
+using projek_mie.Connection;
 
 namespace projek_mie
 {
     public partial class FormNavpenjual : Form
     {
+        dashboardPenjual dashboard;
+        FormKategori kategori;
+        FormProduk produk;
+        FormTopings toping;
+
+        bool keluarAkun = false;
+
         public FormNavpenjual()
         {
             InitializeComponent();
-        }
-
-        private void lblNavDashboard_Click(object sender, EventArgs e)
-        {
-            foreach(Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
-            }
-             dashboardPenjual dashboardPenjual = new dashboardPenjual();
-             dashboardPenjual.MdiParent = this;
-             dashboardPenjual.FormBorderStyle = FormBorderStyle.None;
-            dashboardPenjual.Dock = DockStyle.Fill;
-            dashboardPenjual.Show();
-        }
-
-        private void lblNavProduk_Click(object sender, EventArgs e)
-        {
-            foreach (Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
-            }
-            FormProduk formProduk = new FormProduk();
-            formProduk.MdiParent = this;
-            formProduk.FormBorderStyle = FormBorderStyle.None;
-            formProduk.Dock = DockStyle.Fill;
-            formProduk.Show();
-        }
-
-        private void lblNavTopings_Click(object sender, EventArgs e)
-        {
-            foreach (Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
-            }
-            FormTopings formTopings = new FormTopings();
-            formTopings.MdiParent = this;
-            formTopings.FormBorderStyle = FormBorderStyle.None;
-            formTopings.Dock = DockStyle.Fill;
-            formTopings.Show();
-        }
-
-        private void lblNavKategori_Click(object sender, EventArgs e)
-        {
-            foreach (Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
-            }
-            FormKategori formKategori = new FormKategori();
-            formKategori.MdiParent = this;
-            formKategori.FormBorderStyle = FormBorderStyle.None;
-            formKategori.Dock = DockStyle.Fill;
-            formKategori.Show();
-        }
-
-        private void btnKeluar_Click(object sender, EventArgs e)
-        {
-            foreach (Form mdiChild in MdiChildren)
-            {
-                mdiChild.Close();
-            }
-
-            Formlogin formLogin = new Formlogin();
-            formLogin.FormClosed += (s, args) => Show();
-            Hide();
-            formLogin.Show();
+            this.FormClosed += (s, e) => { if (!keluarAkun) Application.Exit(); };
         }
 
         private void FormNavpenjual_Load(object sender, EventArgs e)
         {
-            foreach (Form mdiChild in this.MdiChildren)
+            lblUserGreeting.Text = "Halo, " + koneksi_db.NamaUser;
+            lblNavDashboard_Click(sender, e);
+        }
+
+        private void lblNavDashboard_Click(object sender, EventArgs e)
+        {
+            if (dashboard == null)
             {
-                mdiChild.Close();
+                dashboard = new dashboardPenjual();
+                dashboard.FormClosed += Dashboard_FormClosed;
+                dashboard.MdiParent = this;
+                dashboard.Dock = DockStyle.Fill;
+                dashboard.Show();
             }
-            dashboardPenjual dashboardPenjual = new dashboardPenjual();
-            dashboardPenjual.MdiParent = this;
-            dashboardPenjual.FormBorderStyle = FormBorderStyle.None;
-            dashboardPenjual.Dock = DockStyle.Fill;
-            dashboardPenjual.Show();
+            else
+            {
+                dashboard.TampilData();
+                dashboard.Activate();
+            }
+        }
+
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dashboard = null;
+        }
+
+        private void lblNavKategori_Click(object sender, EventArgs e)
+        {
+            if (kategori == null)
+            {
+                kategori = new FormKategori();
+                kategori.FormClosed += Kategori_FormClosed;
+                kategori.MdiParent = this;
+                kategori.Dock = DockStyle.Fill;
+                kategori.Show();
+            }
+            else
+            {
+                kategori.TampilKategori();
+                kategori.Activate();
+            }
+        }
+
+        private void Kategori_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            kategori = null;
+        }
+
+        private void lblNavProduk_Click(object sender, EventArgs e)
+        {
+            if (produk == null)
+            {
+                produk = new FormProduk();
+                produk.FormClosed += Produk_FormClosed;
+                produk.MdiParent = this;
+                produk.Dock = DockStyle.Fill;
+                produk.Show();
+            }
+            else
+            {
+                produk.TampilProduk();
+                produk.Activate();
+            }
+        }
+
+        private void Produk_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            produk = null;
+        }
+
+        private void lblNavTopings_Click(object sender, EventArgs e)
+        {
+            if (toping == null)
+            {
+                toping = new FormTopings();
+                toping.FormClosed += Toping_FormClosed;
+                toping.MdiParent = this;
+                toping.Dock = DockStyle.Fill;
+                toping.Show();
+            }
+            else
+            {
+                toping.TampilTopings();
+                toping.Activate();
+            }
+        }
+
+        private void Toping_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            toping = null;
+        }
+
+        private void btnKeluar_Click(object sender, EventArgs e)
+        {
+            keluarAkun = true;
+            Formlogin login = new Formlogin();
+            login.Show();
+            this.Close();
         }
     }
 }

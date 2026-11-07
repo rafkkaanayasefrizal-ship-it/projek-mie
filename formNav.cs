@@ -1,95 +1,116 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
+using projek_mie.Connection;
 
 namespace projek_mie
 {
     public partial class formNav : Form
     {
+        FormDashboard dashboard;
+        FormPesan pesan;
+        FormRiwayat riwayat;
+
+        bool keluarAkun = false;
+
         public formNav()
         {
             InitializeComponent();
-        }
-
-        private void btnKeluar_Click(object sender, EventArgs e)
-        {
-            foreach (Form mdiChild in MdiChildren)
-            {
-                mdiChild.Close();
-            }
-
-            Formlogin formLogin = new Formlogin();
-            formLogin.FormClosed += (s, args) => Show();
-            Hide();
-            formLogin.Show();
-            
-        }
-
-        private void lblNavDashboard_Click(object sender, EventArgs e)
-        {
-            foreach(Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
-
-            }
-            FormDashboard formDashboard = new FormDashboard();
-            formDashboard.MdiParent = this;
-            formDashboard.FormBorderStyle = FormBorderStyle.None;
-            formDashboard.Dock = DockStyle.Fill;
-            formDashboard.Show();
-            formDashboard.BringToFront();
+            this.FormClosed += (s, e) => { if (!keluarAkun) Application.Exit(); };
         }
 
         private void formNav_Load(object sender, EventArgs e)
         {
-            foreach (Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
+            lblUserGreeting.Text = "Halo, " + koneksi_db.NamaUser;
+            BukaDashboard();
+        }
 
+        public void BukaDashboard()
+        {
+            if (dashboard == null)
+            {
+                dashboard = new FormDashboard();
+                dashboard.FormClosed += Dashboard_FormClosed;
+                dashboard.MdiParent = this;
+                dashboard.Dock = DockStyle.Fill;
+                dashboard.Show();
             }
-            FormDashboard formDashboard = new FormDashboard();
-            formDashboard.MdiParent = this;
-            formDashboard.FormBorderStyle = FormBorderStyle.None;
-            formDashboard.Dock = DockStyle.Fill;
-            formDashboard.Show();
-            formDashboard.BringToFront();
+            else
+            {
+                dashboard.TampilData();
+                dashboard.Activate();
+            }
+        }
+
+        public void BukaPesan()
+        {
+            if (pesan == null)
+            {
+                pesan = new FormPesan();
+                pesan.FormClosed += Pesan_FormClosed;
+                pesan.MdiParent = this;
+                pesan.Dock = DockStyle.Fill;
+                pesan.Show();
+            }
+            else
+            {
+                pesan.TampilMenu();
+                pesan.Activate();
+            }
+        }
+
+        public void BukaRiwayat()
+        {
+            if (riwayat == null)
+            {
+                riwayat = new FormRiwayat();
+                riwayat.FormClosed += Riwayat_FormClosed;
+                riwayat.MdiParent = this;
+                riwayat.Dock = DockStyle.Fill;
+                riwayat.Show();
+            }
+            else
+            {
+                riwayat.TampilRiwayat();
+                riwayat.Activate();
+            }
+        }
+
+        private void lblNavDashboard_Click(object sender, EventArgs e)
+        {
+            BukaDashboard();
+        }
+
+        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            dashboard = null;
         }
 
         private void lblNavPesan_Click(object sender, EventArgs e)
         {
-            foreach (Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
+            BukaPesan();
+        }
 
-            }
-            FormPesan Pesan = new FormPesan();
-            Pesan.MdiParent = this;
-            Pesan.FormBorderStyle = FormBorderStyle.None;
-            Pesan.Dock = DockStyle.Fill;
-            Pesan.Show();
-            Pesan.BringToFront();
+        private void Pesan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            pesan = null;
         }
 
         private void lblNavRiwayat_Click(object sender, EventArgs e)
         {
-            foreach (Form mdiChild in this.MdiChildren)
-            {
-                mdiChild.Close();
-
-            }
-            FormRiwayat Riwayat = new FormRiwayat();
-            Riwayat.MdiParent = this;
-            Riwayat.FormBorderStyle = FormBorderStyle.None;
-            Riwayat.Dock = DockStyle.Fill;
-            Riwayat.Show();
-            Riwayat.BringToFront();
+            BukaRiwayat();
         }
 
+        private void Riwayat_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            riwayat = null;
+        }
+
+        private void btnKeluar_Click(object sender, EventArgs e)
+        {
+            keluarAkun = true;
+            Formlogin login = new Formlogin();
+            login.Show();
+            this.Close();
+        }
     }
 }

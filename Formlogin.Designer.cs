@@ -89,10 +89,11 @@ namespace projek_mie
             // textEmail
             // 
             this.textEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEmail.Location = new System.Drawing.Point(39, 160);
-            this.textEmail.Multiline = true;
+            this.textEmail.Multiline = false;
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(468, 32);
+            this.textEmail.Size = new System.Drawing.Size(468, 29);
             this.textEmail.TabIndex = 4;
             // 
             // lblPassword
@@ -116,6 +117,7 @@ namespace projek_mie
             this.lblRole.Size = new System.Drawing.Size(139, 24);
             this.lblRole.TabIndex = 7;
             this.lblRole.Text = "Masuk Sebagai";
+            this.lblRole.Visible = false;
             // 
             // cmbRole
             // 
@@ -129,13 +131,14 @@ namespace projek_mie
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(467, 25);
             this.cmbRole.TabIndex = 8;
+            this.cmbRole.Visible = false;
             // 
             // btnMasuk
             // 
             this.btnMasuk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnMasuk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasuk.ForeColor = System.Drawing.Color.Black;
-            this.btnMasuk.Location = new System.Drawing.Point(166, 350);
+            this.btnMasuk.Location = new System.Drawing.Point(166, 295);
             this.btnMasuk.Name = "btnMasuk";
             this.btnMasuk.Size = new System.Drawing.Size(220, 44);
             this.btnMasuk.TabIndex = 9;
@@ -145,18 +148,21 @@ namespace projek_mie
             // textPassword
             // 
             this.textPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPassword.Location = new System.Drawing.Point(39, 236);
-            this.textPassword.Multiline = true;
+            this.textPassword.Multiline = false;
             this.textPassword.Name = "textPassword";
-            this.textPassword.Size = new System.Drawing.Size(468, 32);
+            this.textPassword.Size = new System.Drawing.Size(468, 29);
             this.textPassword.TabIndex = 10;
+            this.textPassword.UseSystemPasswordChar = true;
             // 
             // lblKeDaftar
             // 
             this.lblKeDaftar.AutoSize = true;
-            this.lblKeDaftar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKeDaftar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblKeDaftar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKeDaftar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblKeDaftar.Location = new System.Drawing.Point(187, 406);
+            this.lblKeDaftar.Location = new System.Drawing.Point(187, 355);
             this.lblKeDaftar.Name = "lblKeDaftar";
             this.lblKeDaftar.Size = new System.Drawing.Size(181, 18);
             this.lblKeDaftar.TabIndex = 11;
