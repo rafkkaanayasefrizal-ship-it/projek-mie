@@ -62,7 +62,7 @@ namespace projek_mie
             this.lblSubJudulPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblSubJudulPage.Location = new System.Drawing.Point(13, 20);
             this.lblSubJudulPage.Name = "lblSubJudulPage";
-            this.lblSubJudulPage.Size = new System.Drawing.Size(219, 15);
+            this.lblSubJudulPage.Size = new System.Drawing.Size(250, 15);
             this.lblSubJudulPage.TabIndex = 12;
             this.lblSubJudulPage.Text = "Tambah, ubah, atur stok, atau hapus produk.";
             // 
@@ -135,6 +135,15 @@ namespace projek_mie
             this.panelFormInput.Size = new System.Drawing.Size(287, 330);
             this.panelFormInput.TabIndex = 14;
             // 
+            // textStok
+            // 
+            this.textStok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textStok.Location = new System.Drawing.Point(6, 222);
+            this.textStok.Name = "textStok";
+            this.textStok.Size = new System.Drawing.Size(263, 24);
+            this.textStok.TabIndex = 24;
+            // 
             // lblStok
             // 
             this.lblStok.AutoSize = true;
@@ -144,16 +153,6 @@ namespace projek_mie
             this.lblStok.Size = new System.Drawing.Size(29, 13);
             this.lblStok.TabIndex = 23;
             this.lblStok.Text = "Stok";
-            // 
-            // textStok
-            // 
-            this.textStok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textStok.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textStok.Location = new System.Drawing.Point(6, 222);
-            this.textStok.Multiline = false;
-            this.textStok.Name = "textStok";
-            this.textStok.Size = new System.Drawing.Size(263, 24);
-            this.textStok.TabIndex = 24;
             // 
             // btnBersihkan
             // 
@@ -212,7 +211,6 @@ namespace projek_mie
             this.textHarga.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHarga.Location = new System.Drawing.Point(6, 167);
-            this.textHarga.Multiline = false;
             this.textHarga.Name = "textHarga";
             this.textHarga.Size = new System.Drawing.Size(263, 24);
             this.textHarga.TabIndex = 17;
@@ -222,7 +220,6 @@ namespace projek_mie
             this.textNamaProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textNamaProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNamaProduk.Location = new System.Drawing.Point(6, 55);
-            this.textNamaProduk.Multiline = false;
             this.textNamaProduk.Name = "textNamaProduk";
             this.textNamaProduk.Size = new System.Drawing.Size(263, 24);
             this.textNamaProduk.TabIndex = 16;
@@ -264,7 +261,7 @@ namespace projek_mie
             this.lblFormHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblFormHeader.Location = new System.Drawing.Point(3, 11);
             this.lblFormHeader.Name = "lblFormHeader";
-            this.lblFormHeader.Size = new System.Drawing.Size(95, 15);
+            this.lblFormHeader.Size = new System.Drawing.Size(94, 15);
             this.lblFormHeader.TabIndex = 9;
             this.lblFormHeader.Text = "Detail Produk";
             // 
@@ -273,7 +270,6 @@ namespace projek_mie
             this.textCariProduk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textCariProduk.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCariProduk.Location = new System.Drawing.Point(623, 9);
-            this.textCariProduk.Multiline = false;
             this.textCariProduk.Name = "textCariProduk";
             this.textCariProduk.Size = new System.Drawing.Size(160, 24);
             this.textCariProduk.TabIndex = 24;
@@ -290,6 +286,7 @@ namespace projek_mie
             this.Controls.Add(this.dgvProduk);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProduk";
             this.Text = "FormProduk";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduk)).EndInit();

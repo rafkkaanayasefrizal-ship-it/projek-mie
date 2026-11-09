@@ -7,9 +7,11 @@ namespace projek_mie
 {
     public partial class dashboardPenjual : Form
     {
+        // Koneksi database dan nomor antrean yang sedang dipilih.
         koneksi_db db = new koneksi_db();
         string noAntrianTerpilih = "";
 
+        // Menyiapkan event tindakan pesanan dan memuat data awal.
         public dashboardPenjual()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace projek_mie
 
         public void TampilData()
         {
+            // Mengambil ringkasan penjualan dan daftar pesanan masuk.
             dgvPesananMasuk.Rows.Clear();
             noAntrianTerpilih = "";
 
@@ -89,6 +92,7 @@ namespace projek_mie
 
         private void dgvPesananMasuk_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Menyimpan nomor antrean dari baris yang dipilih penjual.
             if (e.RowIndex >= 0 && dgvPesananMasuk.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 noAntrianTerpilih = dgvPesananMasuk.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -97,6 +101,7 @@ namespace projek_mie
 
         private void UbahStatusPesanan(string statusBaru)
         {
+            // Mengubah status pesanan menjadi diproses atau selesai.
             if (noAntrianTerpilih == "" && dgvPesananMasuk.CurrentRow != null && dgvPesananMasuk.CurrentRow.Cells[0].Value != null)
             {
                 noAntrianTerpilih = dgvPesananMasuk.CurrentRow.Cells[0].Value.ToString();
@@ -130,16 +135,19 @@ namespace projek_mie
 
         private void btnProses_Click(object sender, EventArgs e)
         {
+            // Menandai pesanan sebagai sedang diproses.
             UbahStatusPesanan("diproses");
         }
 
         private void btnSelesai_Click(object sender, EventArgs e)
         {
+            // Menandai pesanan sebagai selesai.
             UbahStatusPesanan("selesai");
         }
 
         private void btnTolak_Click(object sender, EventArgs e)
         {
+            // Menangani penolakan pesanan yang dipilih.
             if (noAntrianTerpilih == "" && dgvPesananMasuk.CurrentRow != null && dgvPesananMasuk.CurrentRow.Cells[0].Value != null)
             {
                 noAntrianTerpilih = dgvPesananMasuk.CurrentRow.Cells[0].Value.ToString();

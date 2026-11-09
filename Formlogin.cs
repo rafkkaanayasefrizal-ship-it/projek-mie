@@ -7,8 +7,10 @@ namespace projek_mie
 {
     public partial class Formlogin : Form
     {
+        // Objek ini digunakan untuk membuka koneksi ke database.
         koneksi_db db = new koneksi_db();
 
+        // Menyiapkan tampilan login dan menghubungkan setiap tombol dengan event-nya.
         public Formlogin()
         {
             InitializeComponent();
@@ -20,8 +22,10 @@ namespace projek_mie
 
         private void lblSubJudul_Click(object sender, EventArgs e)
         {
+            // Event ini disediakan oleh Designer, tetapi belum membutuhkan proses apa pun.
         }
 
+        // Membuka halaman pendaftaran dan menyembunyikan form login sementara.
         private void lblKeDaftar_Click(object sender, EventArgs e)
         {
             FormDaftar daftar = new FormDaftar();
@@ -32,6 +36,7 @@ namespace projek_mie
 
         private void btnMasuk_Click(object sender, EventArgs e)
         {
+            // Mengambil input pengguna dan menghapus spasi yang tidak diperlukan.
             string email = textEmail.Text.Trim();
             string password = textPassword.Text.Trim();
 
@@ -43,6 +48,7 @@ namespace projek_mie
 
             try
             {
+                // Membuka koneksi hanya selama proses pengecekan login berlangsung.
                 using (MySqlConnection conn = db.GetConnection())
                 {
                     conn.Open();
@@ -56,6 +62,7 @@ namespace projek_mie
 
                     if (reader.Read())
                     {
+                        // Menyimpan identitas pengguna agar bisa dipakai oleh form berikutnya.
                         koneksi_db.UserId = Convert.ToInt32(reader["id"]);
                         koneksi_db.NamaUser = reader["nama_lengkap"].ToString();
                         string roleDb = reader["role"].ToString().ToLower();
@@ -63,7 +70,7 @@ namespace projek_mie
                         MessageBox.Show("Login Berhasil! Selamat datang, " + koneksi_db.NamaUser);
                         this.Hide();
 
-                        // Otomatis arahkan berdasarkan role di database (admin@gmail.com -> penjual, user lain -> pembeli)
+                        // Mengarahkan pengguna ke halaman sesuai role yang tersimpan di database.
                         if (roleDb == "penjual" || email.ToLower() == "admin@gmail.com")
                         {
                             FormNavpenjual navPenjual = new FormNavpenjual();
@@ -83,6 +90,7 @@ namespace projek_mie
             }
             catch (Exception ex)
             {
+                // Menampilkan pesan jika koneksi atau proses login mengalami masalah.
                 MessageBox.Show("Error koneksi: " + ex.Message);
             }
         }

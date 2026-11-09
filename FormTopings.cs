@@ -7,9 +7,11 @@ namespace projek_mie
 {
     public partial class FormTopings : Form
     {
+        // Koneksi database dan ID toping yang sedang dipilih.
         koneksi_db db = new koneksi_db();
         int idTopingTerpilih = 0;
 
+        // Menyiapkan event pengelolaan toping dan memuat data awal.
         public FormTopings()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace projek_mie
 
         public void TampilTopings(string cari = "")
         {
+            // Menampilkan toping sesuai kata pencarian.
             dgvTopings.Rows.Clear();
 
             try
@@ -56,6 +59,7 @@ namespace projek_mie
 
         private void dgvTopings_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Mengisi kolom input dari baris toping yang dipilih.
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvTopings.Rows[e.RowIndex];
@@ -70,6 +74,7 @@ namespace projek_mie
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
+            // Menambahkan toping baru ke database.
             if (textNamaTopings.Text == "" || textHargaTopings.Text == "")
             {
                 MessageBox.Show("Nama dan harga toping harus diisi!");
@@ -100,6 +105,7 @@ namespace projek_mie
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
+            // Memperbarui nama atau harga toping yang dipilih.
             if (idTopingTerpilih == 0)
             {
                 MessageBox.Show("Pilih toping di tabel dulu!");
@@ -131,6 +137,7 @@ namespace projek_mie
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            // Menghapus toping yang dipilih dari database.
             if (idTopingTerpilih == 0)
             {
                 MessageBox.Show("Pilih toping di tabel dulu!");
@@ -160,6 +167,7 @@ namespace projek_mie
 
         private void Bersihkan()
         {
+            // Mengosongkan input dan menghapus ID toping terpilih.
             idTopingTerpilih = 0;
             textNamaTopings.Clear();
             textHargaTopings.Clear();
@@ -167,12 +175,14 @@ namespace projek_mie
 
         private void btnBersihkan_Click(object sender, EventArgs e)
         {
+            // Membersihkan input lalu memuat ulang daftar toping.
             Bersihkan();
             TampilTopings();
         }
 
         private void textCariTopings_TextChanged(object sender, EventArgs e)
         {
+            // Memfilter daftar toping saat kata pencarian berubah.
             TampilTopings(textCariTopings.Text.Trim());
         }
     }

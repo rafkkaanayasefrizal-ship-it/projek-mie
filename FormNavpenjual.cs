@@ -6,13 +6,16 @@ namespace projek_mie
 {
     public partial class FormNavpenjual : Form
     {
+        // Referensi child MDI untuk setiap menu yang tersedia bagi penjual.
         dashboardPenjual dashboard;
         FormKategori kategori;
         FormProduk produk;
         FormTopings toping;
 
+        // Menandai proses logout agar penutupan form tidak dianggap sebagai keluar aplikasi.
         bool keluarAkun = false;
 
+        // Menyiapkan MDI Parent penjual dan event penutupan form.
         public FormNavpenjual()
         {
             InitializeComponent();
@@ -21,12 +24,14 @@ namespace projek_mie
 
         private void FormNavpenjual_Load(object sender, EventArgs e)
         {
+            // Menampilkan nama penjual dan membuka dashboard secara otomatis.
             lblUserGreeting.Text = "Halo, " + koneksi_db.NamaUser;
             lblNavDashboard_Click(sender, e);
         }
 
         private void lblNavDashboard_Click(object sender, EventArgs e)
         {
+            // Membuka atau mengaktifkan kembali dashboard penjual.
             if (dashboard == null)
             {
                 dashboard = new dashboardPenjual();
@@ -44,11 +49,13 @@ namespace projek_mie
 
         private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Menghapus referensi dashboard setelah form ditutup.
             dashboard = null;
         }
 
         private void lblNavKategori_Click(object sender, EventArgs e)
         {
+            // Membuka atau mengaktifkan halaman pengelolaan kategori.
             if (kategori == null)
             {
                 kategori = new FormKategori();
@@ -66,11 +73,13 @@ namespace projek_mie
 
         private void Kategori_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Menghapus referensi kategori setelah form ditutup.
             kategori = null;
         }
 
         private void lblNavProduk_Click(object sender, EventArgs e)
         {
+            // Membuka atau mengaktifkan halaman pengelolaan produk.
             if (produk == null)
             {
                 produk = new FormProduk();
@@ -88,11 +97,13 @@ namespace projek_mie
 
         private void Produk_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Menghapus referensi produk setelah form ditutup.
             produk = null;
         }
 
         private void lblNavTopings_Click(object sender, EventArgs e)
         {
+            // Membuka atau mengaktifkan halaman pengelolaan toping.
             if (toping == null)
             {
                 toping = new FormTopings();
@@ -110,11 +121,13 @@ namespace projek_mie
 
         private void Toping_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Menghapus referensi toping setelah form ditutup.
             toping = null;
         }
 
         private void btnKeluar_Click(object sender, EventArgs e)
         {
+            // Logout mengarahkan pengguna kembali ke form login.
             keluarAkun = true;
             Formlogin login = new Formlogin();
             login.Show();

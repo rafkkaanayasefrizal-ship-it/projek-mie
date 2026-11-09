@@ -149,6 +149,12 @@
     <Compile Include="FormRiwayat.Designer.cs">
       <DependentUpon>FormRiwayat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStatus.Designer.cs">
+      <DependentUpon>FormStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTopings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRiwayat.resx">
       <DependentUpon>FormRiwayat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStatus.resx">
+      <DependentUpon>FormStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTopings.resx">
       <DependentUpon>FormTopings.cs</DependentUpon>

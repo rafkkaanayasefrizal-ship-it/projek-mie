@@ -264,6 +264,7 @@ namespace projek_mie
             this.Controls.Add(this.panelCardPesananAktif);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
             this.panelCardPesananAktif.ResumeLayout(false);

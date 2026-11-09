@@ -167,7 +167,6 @@ namespace projek_mie
             this.textHargaTopings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textHargaTopings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textHargaTopings.Location = new System.Drawing.Point(6, 117);
-            this.textHargaTopings.Multiline = false;
             this.textHargaTopings.Name = "textHargaTopings";
             this.textHargaTopings.Size = new System.Drawing.Size(263, 24);
             this.textHargaTopings.TabIndex = 17;
@@ -177,7 +176,6 @@ namespace projek_mie
             this.textNamaTopings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textNamaTopings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNamaTopings.Location = new System.Drawing.Point(6, 55);
-            this.textNamaTopings.Multiline = false;
             this.textNamaTopings.Name = "textNamaTopings";
             this.textNamaTopings.Size = new System.Drawing.Size(263, 24);
             this.textNamaTopings.TabIndex = 16;
@@ -218,7 +216,6 @@ namespace projek_mie
             this.textCariTopings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textCariTopings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textCariTopings.Location = new System.Drawing.Point(623, 12);
-            this.textCariTopings.Multiline = false;
             this.textCariTopings.Name = "textCariTopings";
             this.textCariTopings.Size = new System.Drawing.Size(160, 24);
             this.textCariTopings.TabIndex = 24;
@@ -235,6 +232,7 @@ namespace projek_mie
             this.Controls.Add(this.dgvTopings);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTopings";
             this.Text = "FormTopings";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTopings)).EndInit();

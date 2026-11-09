@@ -7,9 +7,11 @@ namespace projek_mie
 {
     public partial class FormKategori : Form
     {
+        // Koneksi database dan ID kategori yang sedang dipilih.
         koneksi_db db = new koneksi_db();
         int idKategoriTerpilih = 0;
 
+        // Menyiapkan event CRUD, pencarian, dan memuat data awal.
         public FormKategori()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace projek_mie
 
         public void TampilKategori(string cari = "")
         {
+            // Menampilkan kategori sesuai kata pencarian.
             dgvKategori.Rows.Clear();
 
             try
@@ -52,6 +55,7 @@ namespace projek_mie
 
         private void dgvKategori_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Memindahkan data baris yang dipilih ke kolom input.
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvKategori.Rows[e.RowIndex];
@@ -65,6 +69,7 @@ namespace projek_mie
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
+            // Menambahkan kategori baru setelah input dinyatakan valid.
             if (textNamaKategori.Text.Trim() == "")
             {
                 MessageBox.Show("Nama kategori harus diisi!");
@@ -76,7 +81,7 @@ namespace projek_mie
                 using (MySqlConnection conn = db.GetConnection())
                 {
                     conn.Open();
-                    string query = "INSERT INTO kateudahgori (nama_kategori) VALUES (@nama)";
+                    string query = "INSERT INTO kategori (nama_kategori) VALUES (@nama)";
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nama", textNamaKategori.Text.Trim());
                     cmd.ExecuteNonQuery();
@@ -94,6 +99,7 @@ namespace projek_mie
 
         private void btnUbah_Click(object sender, EventArgs e)
         {
+            // Mengubah nama kategori yang sedang dipilih.
             if (idKategoriTerpilih == 0)
             {
                 MessageBox.Show("Pilih kategori di tabel dulu!");
@@ -124,6 +130,7 @@ namespace projek_mie
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
+            // Menghapus kategori yang sedang dipilih.
             if (idKategoriTerpilih == 0)
             {
                 MessageBox.Show("Pilih kategori di tabel dulu!");
@@ -153,6 +160,7 @@ namespace projek_mie
 
         private void Bersihkan()
         {
+            // Mengembalikan input dan ID pilihan ke kondisi awal.
             idKategoriTerpilih = 0;
             textNamaKategori.Clear();
             textCariKategori.Clear();
@@ -160,16 +168,23 @@ namespace projek_mie
 
         private void btnBersihkan_Click(object sender, EventArgs e)
         {
+            // Membersihkan form lalu menampilkan ulang data kategori.
             Bersihkan();
             TampilKategori();
         }
 
         private void textCariKategori_TextChanged(object sender, EventArgs e)
         {
+            // Pencarian dijalankan setiap kali isi kolom berubah.
             TampilKategori(textCariKategori.Text.Trim());
         }
 
         private void textNamaKategori_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvKategori_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

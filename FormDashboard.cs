@@ -7,8 +7,10 @@ namespace projek_mie
 {
     public partial class FormDashboard : Form
     {
+        // Digunakan untuk mengambil ringkasan pesanan dari database.
         koneksi_db db = new koneksi_db();
 
+        // Menyiapkan event tombol dan langsung memuat data dashboard.
         public FormDashboard()
         {
             InitializeComponent();
@@ -21,12 +23,14 @@ namespace projek_mie
 
         public void TampilData()
         {
+            // Mengosongkan tabel agar data terbaru tidak tercampur dengan data lama.
             dgvPesananKamu.Rows.Clear();
 
             try
             {
                 using (MySqlConnection conn = db.GetConnection())
                 {
+                    // Mengambil jumlah pesanan, total transaksi, dan daftar pesanan pengguna.
                     conn.Open();
 
                     // Hitung pesanan aktif milik pembeli
@@ -74,6 +78,7 @@ namespace projek_mie
 
         private void btnPesanSekarang_Click(object sender, EventArgs e)
         {
+            // Meminta MDI Parent membuka halaman pemesanan.
             if (this.MdiParent is formNav nav)
             {
                 nav.BukaPesan();
@@ -82,6 +87,7 @@ namespace projek_mie
 
         private void btnLihatRiwayat_Click(object sender, EventArgs e)
         {
+            // Meminta MDI Parent membuka halaman riwayat pesanan.
             if (this.MdiParent is formNav nav)
             {
                 nav.BukaRiwayat();

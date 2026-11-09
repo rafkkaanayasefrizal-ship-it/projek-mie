@@ -204,6 +204,7 @@ namespace projek_mie
             this.Controls.Add(this.dtpTanggal);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormRiwayat";
             this.Text = "FormRiwayat";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRiwayat)).EndInit();

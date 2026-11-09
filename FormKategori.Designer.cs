@@ -51,10 +51,9 @@ namespace projek_mie
             this.lblJudulPage.AutoSize = true;
             this.lblJudulPage.BackColor = System.Drawing.Color.Transparent;
             this.lblJudulPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJudulPage.Location = new System.Drawing.Point(18, 14);
-            this.lblJudulPage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJudulPage.Location = new System.Drawing.Point(12, 9);
             this.lblJudulPage.Name = "lblJudulPage";
-            this.lblJudulPage.Size = new System.Drawing.Size(172, 29);
+            this.lblJudulPage.Size = new System.Drawing.Size(120, 20);
             this.lblJudulPage.TabIndex = 12;
             this.lblJudulPage.Text = "Data Kategori";
             // 
@@ -63,10 +62,9 @@ namespace projek_mie
             this.lblSubJudulPage.AutoSize = true;
             this.lblSubJudulPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubJudulPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblSubJudulPage.Location = new System.Drawing.Point(18, 45);
-            this.lblSubJudulPage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubJudulPage.Location = new System.Drawing.Point(12, 29);
             this.lblSubJudulPage.Name = "lblSubJudulPage";
-            this.lblSubJudulPage.Size = new System.Drawing.Size(327, 22);
+            this.lblSubJudulPage.Size = new System.Drawing.Size(224, 15);
             this.lblSubJudulPage.TabIndex = 14;
             this.lblSubJudulPage.Text = "Tambah,ubah,atau,hapus data Kategori\r\n";
             // 
@@ -80,13 +78,13 @@ namespace projek_mie
             this.dgvKategori.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.namaKategori});
-            this.dgvKategori.Location = new System.Drawing.Point(18, 86);
-            this.dgvKategori.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvKategori.Location = new System.Drawing.Point(12, 56);
             this.dgvKategori.Name = "dgvKategori";
             this.dgvKategori.ReadOnly = true;
             this.dgvKategori.RowHeadersWidth = 62;
-            this.dgvKategori.Size = new System.Drawing.Size(718, 231);
+            this.dgvKategori.Size = new System.Drawing.Size(479, 150);
             this.dgvKategori.TabIndex = 15;
+            this.dgvKategori.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKategori_CellContentClick);
             // 
             // id
             // 
@@ -111,19 +109,17 @@ namespace projek_mie
             this.panelFormInput.Controls.Add(this.textNamaKategori);
             this.panelFormInput.Controls.Add(this.lblNamaKategori);
             this.panelFormInput.Controls.Add(this.lblFormHeader);
-            this.panelFormInput.Location = new System.Drawing.Point(752, 86);
-            this.panelFormInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelFormInput.Location = new System.Drawing.Point(501, 56);
             this.panelFormInput.Name = "panelFormInput";
-            this.panelFormInput.Size = new System.Drawing.Size(430, 417);
+            this.panelFormInput.Size = new System.Drawing.Size(287, 271);
             this.panelFormInput.TabIndex = 16;
             // 
             // btnBersihkan
             // 
             this.btnBersihkan.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBersihkan.Location = new System.Drawing.Point(330, 351);
-            this.btnBersihkan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBersihkan.Location = new System.Drawing.Point(220, 228);
             this.btnBersihkan.Name = "btnBersihkan";
-            this.btnBersihkan.Size = new System.Drawing.Size(93, 45);
+            this.btnBersihkan.Size = new System.Drawing.Size(62, 29);
             this.btnBersihkan.TabIndex = 22;
             this.btnBersihkan.Text = "Bersihkan";
             this.btnBersihkan.UseVisualStyleBackColor = false;
@@ -131,10 +127,9 @@ namespace projek_mie
             // btnHapus
             // 
             this.btnHapus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnHapus.Location = new System.Drawing.Point(218, 351);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHapus.Location = new System.Drawing.Point(145, 228);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(88, 45);
+            this.btnHapus.Size = new System.Drawing.Size(59, 29);
             this.btnHapus.TabIndex = 21;
             this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = false;
@@ -142,10 +137,9 @@ namespace projek_mie
             // btnUbah
             // 
             this.btnUbah.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUbah.Location = new System.Drawing.Point(120, 351);
-            this.btnUbah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUbah.Location = new System.Drawing.Point(80, 228);
             this.btnUbah.Name = "btnUbah";
-            this.btnUbah.Size = new System.Drawing.Size(88, 45);
+            this.btnUbah.Size = new System.Drawing.Size(59, 29);
             this.btnUbah.TabIndex = 20;
             this.btnUbah.Text = "Ubah";
             this.btnUbah.UseVisualStyleBackColor = false;
@@ -153,10 +147,9 @@ namespace projek_mie
             // btnTambah
             // 
             this.btnTambah.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnTambah.Location = new System.Drawing.Point(9, 351);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTambah.Location = new System.Drawing.Point(6, 228);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(88, 45);
+            this.btnTambah.Size = new System.Drawing.Size(59, 29);
             this.btnTambah.TabIndex = 19;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = false;
@@ -165,11 +158,9 @@ namespace projek_mie
             // 
             this.textNamaKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textNamaKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNamaKategori.Location = new System.Drawing.Point(9, 85);
-            this.textNamaKategori.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textNamaKategori.Multiline = false;
+            this.textNamaKategori.Location = new System.Drawing.Point(6, 55);
             this.textNamaKategori.Name = "textNamaKategori";
-            this.textNamaKategori.Size = new System.Drawing.Size(392, 30);
+            this.textNamaKategori.Size = new System.Drawing.Size(263, 24);
             this.textNamaKategori.TabIndex = 16;
             this.textNamaKategori.TextChanged += new System.EventHandler(this.textNamaKategori_TextChanged);
             // 
@@ -177,10 +168,9 @@ namespace projek_mie
             // 
             this.lblNamaKategori.AutoSize = true;
             this.lblNamaKategori.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblNamaKategori.Location = new System.Drawing.Point(4, 60);
-            this.lblNamaKategori.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNamaKategori.Location = new System.Drawing.Point(3, 39);
             this.lblNamaKategori.Name = "lblNamaKategori";
-            this.lblNamaKategori.Size = new System.Drawing.Size(114, 20);
+            this.lblNamaKategori.Size = new System.Drawing.Size(77, 13);
             this.lblNamaKategori.TabIndex = 13;
             this.lblNamaKategori.Text = "Nama Kategori";
             // 
@@ -189,10 +179,9 @@ namespace projek_mie
             this.lblFormHeader.AutoSize = true;
             this.lblFormHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblFormHeader.Location = new System.Drawing.Point(4, 17);
-            this.lblFormHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFormHeader.Location = new System.Drawing.Point(3, 11);
             this.lblFormHeader.Name = "lblFormHeader";
-            this.lblFormHeader.Size = new System.Drawing.Size(143, 22);
+            this.lblFormHeader.Size = new System.Drawing.Size(103, 15);
             this.lblFormHeader.TabIndex = 9;
             this.lblFormHeader.Text = "Detail Kategori";
             // 
@@ -200,26 +189,24 @@ namespace projek_mie
             // 
             this.textCariKategori.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.textCariKategori.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textCariKategori.Location = new System.Drawing.Point(930, 28);
-            this.textCariKategori.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textCariKategori.Multiline = false;
+            this.textCariKategori.Location = new System.Drawing.Point(620, 18);
             this.textCariKategori.Name = "textCariKategori";
-            this.textCariKategori.Size = new System.Drawing.Size(238, 30);
+            this.textCariKategori.Size = new System.Drawing.Size(160, 24);
             this.textCariKategori.TabIndex = 25;
             // 
             // FormKategori
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textCariKategori);
             this.Controls.Add(this.panelFormInput);
             this.Controls.Add(this.dgvKategori);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormKategori";
             this.Text = "FormKategori";
             ((System.ComponentModel.ISupportInitialize)(this.dgvKategori)).EndInit();

@@ -7,6 +7,7 @@ namespace projek_mie
 {
     public partial class FormPesan : Form
     {
+        // Koneksi database dan variabel untuk menyimpan menu yang sedang dipilih.
         koneksi_db db = new koneksi_db();
 
         int idProdukDipilih = 0;
@@ -14,6 +15,7 @@ namespace projek_mie
         decimal hargaProdukDipilih = 0;
         decimal totalBayar = 0;
 
+        // Menyiapkan kontrol pemesanan dan menghubungkan event setiap kontrol.
         public FormPesan()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace projek_mie
 
         public void TampilMenu()
         {
+            // Memuat menu yang stoknya masih tersedia ke dalam tabel.
             dgvMenu.Rows.Clear();
 
             try
@@ -68,6 +71,7 @@ namespace projek_mie
 
         private void dgvMenu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Menyimpan informasi menu ketika pengguna memilih salah satu baris.
             if (e.RowIndex >= 0 && dgvMenu.Rows[e.RowIndex].Cells[0].Value != null)
             {
                 DataGridViewRow row = dgvMenu.Rows[e.RowIndex];
@@ -81,6 +85,7 @@ namespace projek_mie
 
         private decimal HitungSubtotal()
         {
+            // Menghitung harga menu, toping, dan jumlah pesanan.
             decimal hargaToping = 0;
             if (rbTelur.Checked) hargaToping = 3000;
             if (rbPilus.Checked) hargaToping = 2000;
@@ -92,6 +97,7 @@ namespace projek_mie
 
         private void btnTambahPesanan_Click(object sender, EventArgs e)
         {
+            // Menambahkan menu yang dipilih ke keranjang belanja.
             if (idProdukDipilih == 0)
             {
                 MessageBox.Show("Pilih menu mie di tabel atas dulu!");
@@ -114,6 +120,7 @@ namespace projek_mie
 
         private void btnHapusItem_Click(object sender, EventArgs e)
         {
+            // Menghapus item terpilih dari keranjang dan mengurangi total pembayaran.
             if (dgvKeranjang.CurrentRow != null && dgvKeranjang.Rows.Count > 0)
             {
                 decimal sub = Convert.ToDecimal(dgvKeranjang.CurrentRow.Cells[3].Value);
@@ -126,6 +133,7 @@ namespace projek_mie
 
         private void btnCheckout_Click(object sender, EventArgs e)
         {
+            // Menyimpan pesanan, detail pesanan, toping, dan mengurangi stok produk.
             if (dgvKeranjang.Rows.Count == 0)
             {
                 MessageBox.Show("Keranjang pesanan masih kosong!");
@@ -142,7 +150,7 @@ namespace projek_mie
                     int urut = Convert.ToInt32(cmdNext.ExecuteScalar());
                     string noAntrian = "M-" + urut;
 
-                    // 1. Simpan ke tabel pemesanan
+                    // Menyimpan informasi utama pesanan terlebih dahulu.
                     string qPemesanan = "INSERT INTO pemesanan (no_antrian, id_user, tanggal, total_bayar, status) VALUES (@no, @uid, NOW(), @total, 'baru')";
                     MySqlCommand cmdPesan = new MySqlCommand(qPemesanan, conn);
                     cmdPesan.Parameters.AddWithValue("@no", noAntrian);
@@ -152,7 +160,7 @@ namespace projek_mie
 
                     long idPesananBaru = cmdPesan.LastInsertedId;
 
-                    // 2. Simpan item ke detail_pesanan, detail_toping, dan kurangi stok produk
+                    // Menyimpan setiap item keranjang ke detail pesanan dan mengurangi stok.
                     foreach (DataGridViewRow row in dgvKeranjang.Rows)
                     {
                         if (row.Cells[0].Value == null) continue;
@@ -172,18 +180,34 @@ namespace projek_mie
 
                         long idDetailBaru = cmdDetail.LastInsertedId;
 
-                        if (namaTop == "Telur" || namaTop == "Pilus")
+                        // Mencari ID toping berdasarkan nama agar sesuai dengan data database.
+                        if (namaTop != "Tanap Toping" && namaTop != "Tanpa Toping")
                         {
-                            int idTop = namaTop == "Telur" ? 1 : 2;
-                            decimal hrgTop = namaTop == "Telur" ? 3000 : 2000;
-                            MySqlCommand cmdTop = new MySqlCommand("INSERT INTO detail_toping (id_detail, id_toping, harga) VALUES (@idDet, @idTop, @hrg)", conn);
-                            cmdTop.Parameters.AddWithValue("@idDet", idDetailBaru);
-                            cmdTop.Parameters.AddWithValue("@idTop", idTop);
-                            cmdTop.Parameters.AddWithValue("@hrg", hrgTop);
-                            cmdTop.ExecuteNonQuery();
+                            // Mengambil ID dan harga toping yang sebenarnya.
+                            string qCariToping = "SELECT id_toping, harga FROM toping WHERE nama_toping = @namaTop";
+                            MySqlCommand cmdCariTop = new MySqlCommand(qCariToping, conn);
+                            cmdCariTop.Parameters.AddWithValue("@namaTop", namaTop);
+
+                            using (MySqlDataReader rTop = cmdCariTop.ExecuteReader())
+                            {
+                                if (rTop.Read())
+                                {
+                                    int idTop = Convert.ToInt32(rTop["id_toping"]);
+                                    decimal hrgTop = Convert.ToDecimal(rTop["harga"]);
+                                    rTop.Close(); // Tutup reader sebelum eksekusi command lain
+
+                                    // Menyimpan toping yang dipilih ke detail pesanan.
+                                    string qTop = "INSERT INTO detail_toping (id_detail, id_toping, harga) VALUES (@idDet, @idTop, @hrg)";
+                                    MySqlCommand cmdTop = new MySqlCommand(qTop, conn);
+                                    cmdTop.Parameters.AddWithValue("@idDet", idDetailBaru);
+                                    cmdTop.Parameters.AddWithValue("@idTop", idTop);
+                                    cmdTop.Parameters.AddWithValue("@hrg", hrgTop);
+                                    cmdTop.ExecuteNonQuery();
+                                }
+                            }
                         }
 
-                        // Kurangi stok produk
+                        // Stok dikurangi sesuai jumlah produk yang dibeli.
                         MySqlCommand cmdStok = new MySqlCommand("UPDATE produk SET stok = stok - @jml WHERE id_produk = @idProd", conn);
                         cmdStok.Parameters.AddWithValue("@jml", jml);
                         cmdStok.Parameters.AddWithValue("@idProd", idProd);
@@ -202,6 +226,11 @@ namespace projek_mie
             {
                 MessageBox.Show("Error checkout: " + ex.Message);
             }
+        }
+
+        private void rbTelur_CheckedChanged(object sender, EventArgs e)
+        {
+            // Perubahan toping dihitung melalui event CheckedChanged yang didaftarkan di constructor.
         }
     }
 }

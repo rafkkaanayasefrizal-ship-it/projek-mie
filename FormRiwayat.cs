@@ -7,8 +7,10 @@ namespace projek_mie
 {
     public partial class FormRiwayat : Form
     {
+        // Koneksi database digunakan untuk mengambil riwayat pesanan pengguna.
         koneksi_db db = new koneksi_db();
 
+        // Menyiapkan pilihan filter status dan memuat riwayat pertama kali.
         public FormRiwayat()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace projek_mie
 
         public void TampilRiwayat()
         {
+            // Mengambil riwayat pesanan sesuai status yang dipilih.
             dgvRiwayat.Rows.Clear();
             decimal totalBelanja = 0;
 
@@ -76,6 +79,7 @@ namespace projek_mie
 
         private void btnCari_Click(object sender, EventArgs e)
         {
+            // Menjalankan kembali pencarian berdasarkan filter terbaru.
             TampilRiwayat();
         }
     }

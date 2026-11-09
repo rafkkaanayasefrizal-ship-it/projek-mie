@@ -121,7 +121,7 @@ namespace projek_mie
             this.lblPendapatanHariIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblPendapatanHariIni.Location = new System.Drawing.Point(19, 45);
             this.lblPendapatanHariIni.Name = "lblPendapatanHariIni";
-            this.lblPendapatanHariIni.Size = new System.Drawing.Size(55, 24);
+            this.lblPendapatanHariIni.Size = new System.Drawing.Size(53, 24);
             this.lblPendapatanHariIni.TabIndex = 14;
             this.lblPendapatanHariIni.Text = "Rp 0";
             // 
@@ -185,7 +185,7 @@ namespace projek_mie
             this.lblMenuTerlaris.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblMenuTerlaris.Location = new System.Drawing.Point(19, 45);
             this.lblMenuTerlaris.Name = "lblMenuTerlaris";
-            this.lblMenuTerlaris.Size = new System.Drawing.Size(13, 16);
+            this.lblMenuTerlaris.Size = new System.Drawing.Size(12, 16);
             this.lblMenuTerlaris.TabIndex = 14;
             this.lblMenuTerlaris.Text = "-";
             // 
@@ -300,7 +300,7 @@ namespace projek_mie
             this.lblFooterKiri.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblFooterKiri.Location = new System.Drawing.Point(12, 338);
             this.lblFooterKiri.Name = "lblFooterKiri";
-            this.lblFooterKiri.Size = new System.Drawing.Size(96, 13);
+            this.lblFooterKiri.Size = new System.Drawing.Size(90, 13);
             this.lblFooterKiri.TabIndex = 25;
             this.lblFooterKiri.Text = "0 pesanan hari ini";
             // 
@@ -310,7 +310,7 @@ namespace projek_mie
             this.lblFooterKanan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblFooterKanan.Location = new System.Drawing.Point(645, 338);
             this.lblFooterKanan.Name = "lblFooterKanan";
-            this.lblFooterKanan.Size = new System.Drawing.Size(119, 13);
+            this.lblFooterKanan.Size = new System.Drawing.Size(114, 13);
             this.lblFooterKanan.TabIndex = 26;
             this.lblFooterKanan.Text = "Login sebagai: Penjual";
             // 
@@ -334,6 +334,7 @@ namespace projek_mie
             this.Controls.Add(this.panelCardPesananMasuk);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "dashboardPenjual";
             this.Text = "dashboardPenjual";
             this.panelCardPesananMasuk.ResumeLayout(false);

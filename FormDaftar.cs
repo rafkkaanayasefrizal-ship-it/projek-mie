@@ -7,8 +7,10 @@ namespace projek_mie
 {
     public partial class FormDaftar : Form
     {
+        // Dipakai setiap kali form perlu berkomunikasi dengan database.
         koneksi_db db = new koneksi_db();
 
+        // Menyiapkan tampilan form dan menghubungkan tombol dengan event-nya.
         public FormDaftar()
         {
             InitializeComponent();
@@ -19,21 +21,26 @@ namespace projek_mie
 
         private void textNama_TextChanged(object sender, EventArgs e)
         {
+            // Belum ada proses khusus saat nama diketik.
         }
 
+        // Menjalankan seluruh proses pendaftaran akun baru.
         private void btnDaftar_Click(object sender, EventArgs e)
         {
+            // Mengambil isi setiap input dan menghapus spasi di awal atau akhir.
             string nama = textNama.Text.Trim();
             string email = textEmail.Text.Trim();
             string password = textPassword.Text.Trim();
             string konfirmasi = textKonfirmasiPassword.Text.Trim();
 
+            // Semua kolom wajib diisi sebelum proses dilanjutkan.
             if (nama == "" || email == "" || password == "" || konfirmasi == "")
             {
                 MessageBox.Show("Semua kolom harus diisi!");
                 return;
             }
 
+            // Password dan konfirmasi password harus sama.
             if (password != konfirmasi)
             {
                 MessageBox.Show("Password dan Konfirmasi Password tidak sama!");
@@ -42,42 +49,50 @@ namespace projek_mie
 
             try
             {
-                using (MySqlConnection conn = db.GetConnection())
+                // Satu koneksi dipakai untuk mengecek email dan menyimpan akun.
+                using (MySqlConnection koneksi = db.GetConnection())
                 {
-                    conn.Open();
+                    koneksi.Open();
 
-                    string cekEmail = "SELECT COUNT(*) FROM users WHERE email = @email";
-                    MySqlCommand cmdCek = new MySqlCommand(cekEmail, conn);
-                    cmdCek.Parameters.AddWithValue("@email", email);
-
-                    int jumlah = Convert.ToInt32(cmdCek.ExecuteScalar());
-                    if (jumlah > 0)
+                    // Cek dulu agar satu email tidak digunakan oleh dua akun.
+                    string queryCekEmail = "SELECT COUNT(*) FROM users WHERE email = @email";
+                    using (MySqlCommand perintahCekEmail = new MySqlCommand(queryCekEmail, koneksi))
                     {
-                        MessageBox.Show("Email sudah terdaftar, gunakan email lain!");
-                        return;
+                        perintahCekEmail.Parameters.AddWithValue("@email", email);
+
+                        int jumlahEmail = Convert.ToInt32(perintahCekEmail.ExecuteScalar());
+                        if (jumlahEmail > 0)
+                        {
+                            MessageBox.Show("Email sudah terdaftar, gunakan email lain!");
+                            return;
+                        }
                     }
 
-                    // Simpan user baru otomatis sebagai pembeli
-                    string query = "INSERT INTO users (nama_lengkap, email, password, role) VALUES (@nama, @email, @password, 'pembeli')";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@nama", nama);
-                    cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    cmd.ExecuteNonQuery();
+                    // Jika email belum digunakan, buat akun dengan role pembeli.
+                    string querySimpanAkun = "INSERT INTO users (nama_lengkap, email, password, role) VALUES (@nama, @email, @password, 'pembeli')";
+                    using (MySqlCommand perintahSimpanAkun = new MySqlCommand(querySimpanAkun, koneksi))
+                    {
+                        perintahSimpanAkun.Parameters.AddWithValue("@nama", nama);
+                        perintahSimpanAkun.Parameters.AddWithValue("@email", email);
+                        perintahSimpanAkun.Parameters.AddWithValue("@password", password);
+                        perintahSimpanAkun.ExecuteNonQuery();
+                    }
 
                     MessageBox.Show("Pendaftaran berhasil! Silakan login.");
-                    this.Close();
+                    Close();
                 }
             }
             catch (Exception ex)
             {
+                // Jika database bermasalah, tampilkan pesan agar pengguna tahu penyebabnya.
                 MessageBox.Show("Gagal mendaftar: " + ex.Message);
             }
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Tombol batal hanya menutup form pendaftaran.
+            Close();
         }
     }
 }

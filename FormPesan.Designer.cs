@@ -309,6 +309,7 @@ namespace projek_mie
             this.rbTelur.TabStop = true;
             this.rbTelur.Text = "Telur + Rp3.000";
             this.rbTelur.UseVisualStyleBackColor = true;
+            this.rbTelur.CheckedChanged += new System.EventHandler(this.rbTelur_CheckedChanged);
             // 
             // lblJudulKeranjang
             // 
@@ -349,6 +350,7 @@ namespace projek_mie
             this.Controls.Add(this.dgvMenu);
             this.Controls.Add(this.lblSubJudulPage);
             this.Controls.Add(this.lblJudulPage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FormPesan";
             this.Text = "FormPesan";
