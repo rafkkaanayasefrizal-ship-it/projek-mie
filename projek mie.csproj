@@ -95,6 +95,12 @@
     <Compile Include="dashboardPenjual.Designer.cs">
       <DependentUpon>dashboardPenjual.cs</DependentUpon>
     </Compile>
+    <Compile Include="formstatuspesanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formstatuspesanan.Designer.cs">
+      <DependentUpon>formstatuspesanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="formNav.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     <EmbeddedResource Include="FormRiwayat.resx">
       <DependentUpon>FormRiwayat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formstatuspesanan.resx">
+      <DependentUpon>formstatuspesanan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTopings.resx">
       <DependentUpon>FormTopings.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +209,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -213,6 +223,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Centang.png" />
+    <None Include="Resources\picCentang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

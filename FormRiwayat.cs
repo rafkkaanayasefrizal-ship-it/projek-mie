@@ -7,21 +7,25 @@ namespace projek_mie
 {
     public partial class FormRiwayat : Form
     {
-        koneksi_db db = new koneksi_db();
+        // Digunakan untuk mengambil riwayat milik pengguna yang sedang login.
+        private readonly koneksi_db db = new koneksi_db();
 
         public FormRiwayat()
         {
             InitializeComponent();
 
+            // Pilihan status digunakan untuk menyaring riwayat yang ditampilkan.
             cmbFilterStatus.Items.Clear();
             cmbFilterStatus.Items.AddRange(new object[] { "Semua", "baru", "diproses", "selesai" });
             cmbFilterStatus.SelectedIndex = 0;
 
             btnCari.Click += btnCari_Click;
 
+            // Tampilkan seluruh riwayat pertama kali, karena pilihan awal adalah "Semua".
             TampilRiwayat();
         }
 
+        // Mengambil riwayat pesanan pengguna dan menghitung total dari baris yang ditampilkan.
         public void TampilRiwayat()
         {
             dgvRiwayat.Rows.Clear();
@@ -39,32 +43,47 @@ namespace projek_mie
                                      LEFT JOIN produk pr ON dp.id_produk = pr.id_produk
                                      WHERE pm.id_user = @uid";
 
-                    if (cmbFilterStatus.Text != "Semua" && cmbFilterStatus.Text != "")
+                    // Simpan pilihan ini agar query dan parameter status menggunakan kondisi yang sama.
+                    bool pakaiFilterStatus = cmbFilterStatus.Text != "Semua" && cmbFilterStatus.Text != "";
+
+                    // Tambahkan filter status hanya jika pengguna memilih status tertentu.
+                    if (pakaiFilterStatus)
                     {
                         query += " AND pm.status = @status";
                     }
 
                     query += " ORDER BY pm.id_pemesanan DESC";
 
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@uid", koneksi_db.UserId);
-                    cmd.Parameters.AddWithValue("@status", cmbFilterStatus.Text);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-                    while (reader.Read())
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        decimal sub = reader["subtotal"] != DBNull.Value ? Convert.ToDecimal(reader["subtotal"]) : 0;
-                        totalBelanja += sub;
+                        cmd.Parameters.AddWithValue("@uid", koneksi_db.UserId);
 
-                        dgvRiwayat.Rows.Add(
-                            reader["no_antrian"],
-                            reader["tanggal"],
-                            reader["nama_produk"],
-                            "Rp " + sub.ToString("N0"),
-                            reader["status"]
-                        );
+                        // Parameter status hanya digunakan ketika filter bukan "Semua".
+                        if (pakaiFilterStatus)
+                        {
+                            cmd.Parameters.AddWithValue("@status", cmbFilterStatus.Text);
+                        }
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // LEFT JOIN dapat menghasilkan subtotal kosong, sehingga nilainya dianggap nol.
+                                decimal sub = reader["subtotal"] != DBNull.Value ? Convert.ToDecimal(reader["subtotal"]) : 0;
+                                totalBelanja += sub;
+
+                                dgvRiwayat.Rows.Add(
+                                    reader["no_antrian"],
+                                    reader["tanggal"],
+                                    reader["nama_produk"],
+                                    "Rp " + sub.ToString("N0"),
+                                    reader["status"]
+                                );
+                            }
+                        }
                     }
 
+                    // Tampilkan jumlah subtotal dari riwayat yang sedang terlihat.
                     lblTotalBelanja.Text = "Rp " + totalBelanja.ToString("N0");
                 }
             }
@@ -76,6 +95,7 @@ namespace projek_mie
 
         private void btnCari_Click(object sender, EventArgs e)
         {
+            // Muat ulang data setelah pengguna memilih filter status.
             TampilRiwayat();
         }
     }

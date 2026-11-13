@@ -7,14 +7,33 @@ namespace projek_mie
 {
     public partial class Formlogin : Form
     {
-        koneksi_db db = new koneksi_db();
+        // Digunakan untuk membuka koneksi database dan menyimpan data sesi pengguna.
+        private readonly koneksi_db db = new koneksi_db();
+        private CheckBox chkTampilkanPassword;
 
         public Formlogin()
         {
             InitializeComponent();
 
+            // Sediakan pilihan untuk menampilkan atau menyembunyikan password.
+            chkTampilkanPassword = new CheckBox
+            {
+                Text = "Tampilkan password",
+                AutoSize = true,
+                Location = new System.Drawing.Point(39, 270),
+                TabIndex = 11
+            };
+            chkTampilkanPassword.CheckedChanged += (sender, e) =>
+            {
+                textPassword.UseSystemPasswordChar = !chkTampilkanPassword.Checked;
+            };
+            Controls.Add(chkTampilkanPassword);
+
+            // Hubungkan tombol dan label dengan aksi login atau pindah ke form daftar.
             btnMasuk.Click += btnMasuk_Click;
             lblKeDaftar.Click += lblKeDaftar_Click;
+
+            // Aplikasi ditutup jika form login yang menjadi form utama ikut ditutup.
             this.FormClosed += (s, e) => Application.Exit();
         }
 
@@ -25,6 +44,7 @@ namespace projek_mie
         private void lblKeDaftar_Click(object sender, EventArgs e)
         {
             FormDaftar daftar = new FormDaftar();
+            // Sembunyikan login selama form daftar terbuka, lalu tampilkan kembali setelah ditutup.
             this.Hide();
             daftar.ShowDialog();
             this.Show();
@@ -32,11 +52,13 @@ namespace projek_mie
 
         private void btnMasuk_Click(object sender, EventArgs e)
         {
+            // Hilangkan spasi luar agar pencocokan akun tidak terganggu oleh input yang tidak sengaja.
             string email = textEmail.Text.Trim();
             string password = textPassword.Text.Trim();
 
             if (email == "" || password == "")
             {
+                // Tidak perlu mengirim query jika salah satu input wajib masih kosong.
                 MessageBox.Show("Email dan Password harus diisi!");
                 return;
             }
@@ -47,37 +69,42 @@ namespace projek_mie
                 {
                     conn.Open();
 
+                    // Pengguna dapat masuk memakai email atau nama lengkap yang terdaftar.
                     string query = "SELECT * FROM users WHERE (email = @email OR nama_lengkap = @email) AND password = @password";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@password", password);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
-                        koneksi_db.UserId = Convert.ToInt32(reader["id"]);
-                        koneksi_db.NamaUser = reader["nama_lengkap"].ToString();
-                        string roleDb = reader["role"].ToString().ToLower();
+                        cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@password", password);
 
-                        MessageBox.Show("Login Berhasil! Selamat datang, " + koneksi_db.NamaUser);
-                        this.Hide();
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Simpan identitas pengguna agar bisa dipakai oleh form lain.
+                                koneksi_db.UserId = Convert.ToInt32(reader["id"]);
+                                koneksi_db.NamaUser = reader["nama_lengkap"].ToString();
+                                string roleDb = reader["role"].ToString().ToLower();
 
-                        // Otomatis arahkan berdasarkan role di database (admin@gmail.com -> penjual, user lain -> pembeli)
-                        if (roleDb == "penjual" || email.ToLower() == "admin@gmail.com")
-                        {
-                            FormNavpenjual navPenjual = new FormNavpenjual();
-                            navPenjual.Show();
+                                MessageBox.Show("Login Berhasil! Selamat datang, " + koneksi_db.NamaUser);
+                                this.Hide();
+
+                                // Arahkan pengguna ke navigasi yang sesuai dengan perannya.
+                                if (roleDb == "penjual" || email.ToLower() == "admin@gmail.com")
+                                {
+                                    FormNavpenjual navPenjual = new FormNavpenjual();
+                                    navPenjual.Show();
+                                }
+                                else
+                                {
+                                    formNav navPembeli = new formNav();
+                                    navPembeli.Show();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Email atau Password salah!");
+                            }
                         }
-                        else
-                        {
-                            formNav navPembeli = new formNav();
-                            navPembeli.Show();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Email atau Password salah!");
                     }
                 }
             }
